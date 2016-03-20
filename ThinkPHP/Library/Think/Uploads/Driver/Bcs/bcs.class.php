@@ -189,7 +189,7 @@ class BaiduBCS {
 		if (isset ( $opt ['content'] )) {
 			$request->set_body ( $opt ['content'] );
 		}
-		// Upload file
+		// Uploads file
 		if (isset ( $opt ['fileUpload'] )) {
 			if (! file_exists ( $opt ['fileUpload'] )) {
 				throw new BCS_Exception ( 'File[' . $opt ['fileUpload'] . '] not found!', - 1 );
@@ -626,7 +626,7 @@ class BaiduBCS {
 			$objects [$prefix . $object] = $file;
 		}
 		$objectCount = count ( $objects );
-		$before_upload_log = "Upload directory: bucket[$bucket] upload_dir[$dir] file_sum[$objectCount]";
+		$before_upload_log = "Uploads directory: bucket[$bucket] upload_dir[$dir] file_sum[$objectCount]";
 		if (isset ( $opt ["seek_object_id"] )) {
 			$before_upload_log .= " seek_object_id[" . $opt ["seek_object_id"] . "/$objectCount]";
 		}
@@ -696,16 +696,16 @@ class BaiduBCS {
 				$response = $this->create_object ( $bucket, $object, $file, $tmp_opt );
 			} catch ( Exception $e ) {
 				$this->log ( $e->getMessage (), $opt );
-				$this->log ( "Upload Failed id[$num/$objectCount]object[$object]file[$file].", $opt );
+				$this->log ( "Uploads Failed id[$num/$objectCount]object[$object]file[$file].", $opt );
 				$num ++;
 				continue;
 			}
 			if ($response->isOK ()) {
 				$result ["success"] ++;
-				$this->log ( "Upload Success id[$num/$objectCount]object[$object]file[$file].", $opt );
+				$this->log ( "Uploads Success id[$num/$objectCount]object[$object]file[$file].", $opt );
 			} else {
 				$result ["failed"] [] = "id[$num/$objectCount]object[$object]file[$file]";
-				$this->log ( "Upload Failed id[$num/$objectCount]object[$object]file[$file].", $opt );
+				$this->log ( "Uploads Failed id[$num/$objectCount]object[$object]file[$file].", $opt );
 			}
 			if (isset ( $opt [self::IMPORT_BCS_POST_FILTER] ) && function_exists ( $opt [self::IMPORT_BCS_POST_FILTER] )) {
 				$opt [self::IMPORT_BCS_POST_FILTER] ( $bucket, $object, $file, $tmp_opt, $response );
@@ -713,11 +713,11 @@ class BaiduBCS {
 			$num ++;
 		}
 		//打印日志并返回结果数组
-		$result_str = "\r\n\r\nUpload $dir to $bucket finished!\r\n";
+		$result_str = "\r\n\r\nUploads $dir to $bucket finished!\r\n";
 		$result_str .= "**********************************************************\r\n";
 		$result_str .= "**********************Result Summary**********************\r\n";
 		$result_str .= "**********************************************************\r\n";
-		$result_str .= "Upload directory :  [$dir]\r\n";
+		$result_str .= "Uploads directory :  [$dir]\r\n";
 		$result_str .= "File num :  [$objectCount]\r\n";
 		$result_str .= "Success: \r\n\tNum: " . $result ["success"] . "\r\n";
 		$result_str .= "Skipped:\r\n\tNum:" . $result ["skipped"] . "\r\n";

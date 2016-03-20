@@ -1,20 +1,20 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>$Title$</title>
 
-    <script type="text/javascript" language="javascript" src="__JS__/jquery.js"></script>
-    <script type="text/javascript" language="javascript" src="__JS__/register.js"></script>
-    <script type="text/javascript" language="javascript" src="__JS__/myPublicFunction.js"></script>
-    <link rel="stylesheet" href="__CSS__/register.css">
+    <script type="text/javascript" language="javascript" src="/Public/Home/js/jquery.js"></script>
+    <script type="text/javascript" language="javascript" src="/Public/Home/js/register.js"></script>
+    <script type="text/javascript" language="javascript" src="/Public/Home/js/myPublicFunction.js"></script>
+    <link rel="stylesheet" href="/Public/Home/css/register.css">
 
 </head>
 <body>
-    <img id="backgroundImg2" src="__IMG__/register_background2.jpg" />
-    <img id="backgroundImg" src="__IMG__/register_background.jpg" />
+    <img id="backgroundImg2" src="/Public/Home/img/register_background2.jpg" />
+    <img id="backgroundImg" src="/Public/Home/img/register_background.jpg" />
     <div id="iAllContent">
-        <div id="iLogoContent"><span></span><img src="__IMG__/panda_blog.png" /></div>
+        <div id="iLogoContent"><span></span><img src="/Public/Home/img/panda_blog.png" /></div>
         <div id="iCenterContent">
             <div id="iCenterContentDiv">
                 <div id="iRegisterBox">
@@ -37,7 +37,7 @@
                                     <th class="firstC">注册微博名:</th><th><input value="" name="table_name"></th><th class="prompt">@提示部分@</th>
                                 </tr>
                                 <tr>
-                                    <th class="firstC">验证码:</th><th><input type="text" value="" name="table_confirm" maxlength="5" size="4"><img src="{:U("verify")}" id="iVerifyImg" style="margin-left:10px ;vertical-align: middle" onclick="changeVerify()"></th><th class="prompt">@提示部分@</th>
+                                    <th class="firstC">验证码:</th><th><input type="text" value="" name="table_confirm" maxlength="5" size="4"><img src="<?php echo U("verify");?>" id="iVerifyImg" style="margin-left:10px ;vertical-align: middle" onclick="changeVerify()"></th><th class="prompt">@提示部分@</th>
                                 </tr>
                             </table>
                             </form>

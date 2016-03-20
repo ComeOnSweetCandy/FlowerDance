@@ -1,0 +1,91 @@
+#settingPageAllContent
+{
+    width: 600px;
+    height: 600px;
+    margin: 7px auto;
+    background: url("../img/back/back5.jpg") repeat;
+}
+
+#settingPageAllContent #settingImageContent
+{
+    width: 100%;
+    height: 200px;
+    border-top: 1px solid #b1b1b1;
+    border-bottom: 1px solid #b1b1b1;
+}
+
+#settingPageAllContent #settingImageContent #dsp_ImageRightBar
+{
+    width: 400px;
+    height: 200px;
+    background-color: blue;
+    display: inline-block;
+    float: left;
+}
+
+#settingPageAllContent #settingImageContent #dsp_ImageBar
+{
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    background-color: green;
+    float: left;
+}
+
+#settingPageAllContent #settingImageContent #dsp_ImageBar img
+{
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top:25px;
+}
+
+#settingPageAllContent #settingImageContent #dsp_ImageRightBar a
+{
+    text-align: center;
+    font-size: 22px;
+    line-height: 50px;
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    background-color: #3fff30;
+    position: relative;
+    vertical-align: middle;
+    margin-left: 40px;
+}
+#settingPageAllContent #settingImageContent #dsp_ImageRightBar a:hover
+{
+    background-color: #42ae09;
+}
+
+#settingPageAllContent #settingImageContent #dsp_ImageRightBar #uploadContent
+{
+    width: 250px;
+    height: 50px;
+    background-color: #00ee00;
+    position: absolute;
+    top:0px;
+    left:0px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+#settingPageAllContent #settingImageContent #dsp_ImageRightBar #uplodaButton
+{
+    width:50px;
+    height: 50px;
+    border: none;
+    background-color: #ae0504;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#spanModel
+{
+    display: inline-block;
+    width: 1px;
+    height: 200px;
+    vertical-align: middle;
+}

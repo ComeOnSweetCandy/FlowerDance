@@ -176,17 +176,54 @@ function getTalks(task)
 
     MYAjaxSubmit(url,2,sendString,function(str)
     {
-        var baseNode = document.getElementById("btt_EveryoneTalkContent");
-        var waitCopyNode = document.getElementById("talk_class");
-
         var obj = JSON.parse(str);
         var objLength = obj.length;
 
+        //计算一共有多少页
+        var allTalksCount = obj[0]["count"]
+        document.getElementById("hidden_talk_All_Count").setAttribute("value",allTalksCount) ;
+        if(allTalksCount==0)
+        {
+            document.getElementById("btt_PageContent").style.display="none";
+            return;
+        }
+        else
+        {
+            document.getElementById("btt_PageContent").style.display = "block";
+        }
+        var pagesCount = parseInt(allTalksCount/20);
+        var pagesCount_mode = allTalksCount%20;
+        pagesCount = (pagesCount_mode==0?pagesCount:pagesCount+1);
+        //记录总页数 与当前页数
+        document.getElementById("hidden_talk_All_Pages").value = pagesCount;
+        document.getElementById("hidden_talk_Pre_Pages").value = 1;
+        document.getElementById("btt_AllTalkCount").innerHTML = ""+pagesCount;
+
+        //插入评论
+        var baseNode = document.getElementById("btt_EveryoneTalkContent");
+        var waitCopyNode = document.getElementById("talk_class_copy");
+        //获取已经有的 talk div的数量 并且全部表现之为NONE
+        var talkClassNodeList = document.getElementsByClassName("talk_class");
+        var alreadyExistTalkDiv = talkClassNodeList.length;
+        for(var i=0;i<talkClassNodeList.length;i++)
+        {
+            talkClassNodeList[i].style.display="none";
+        }
+
         for(var i in obj)
         {
-            var newNode = waitCopyNode.cloneNode(true);
+            var newNode = "";
+            if(i<alreadyExistTalkDiv)
+            {
+                newNode = document.getElementsByClassName("talk_class")[i];
+            }
+            else
+            {
+                newNode = waitCopyNode.cloneNode(true);
+                baseNode.appendChild(newNode);
+            }
             newNode.style.display = "block";
-            baseNode.appendChild(newNode);
+            newNode.setAttribute("class","talk_class");
             newNode.getElementsByClassName("talk_nameAndSaid")[0].innerHTML = obj[i]["user_name"]+":<span style='color: black'>"+obj[i]["talk_content"]+"</span>";
             newNode.getElementsByClassName("talk_timeAnd")[0].innerHTML = getLocalTime(obj[i]["talk_time"]);
         }
@@ -201,11 +238,40 @@ function submitTalk(url)
 
     MYAjaxSubmit(url,2,sendString,function(str)
     {
+        //插入评论
+        var baseNode = document.getElementById("btt_EveryoneTalkContent");
+        var waitCopyNode = document.getElementById("talk_class_copy");
 
+        var newNode = waitCopyNode.cloneNode(true);
+        newNode.style.display = "block";
+        baseNode.appendChild(newNode);
+        newNode.getElementsByClassName("talk_nameAndSaid")[0].innerHTML = document.getElementById("iUserName").innerHTML+":<span style='color: black'>"+talk_content+"</span>";
+        newNode.getElementsByClassName("talk_timeAnd")[0].innerHTML = "刚刚";
     });
 }
 
 function getLocalTime(nS)
 {
     return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
+}
+
+function showMoreTalks(mode)
+{
+    var allPageCount = parseInt(document.getElementById("hidden_talk_All_Pages").value);
+    var prePage = parseInt(document.getElementById("hidden_talk_Pre_Pages").value);
+    var userWantPage = parseInt(document.getElementById("btt_InputUserWantPage").value);
+    var page = "";
+    switch (mode)
+    {
+        case 1:page=1;break;
+        case 2:page=prePage>1?prePage-1:prePage;break;
+        case 3:page=userWantPage;break;
+        case 4:page=prePage<allPageCount?prePage+1:prePage;break;
+        case 5:page=allPageCount;break;
+    }
+
+    document.getElementById("hidden_talk_first").value=(page-1)*20;
+    document.getElementById("hidden_talk_count").value=20;
+
+    getTalks(document.getElementById("hidden_article_id").value);
 }

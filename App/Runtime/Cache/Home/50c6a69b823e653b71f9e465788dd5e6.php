@@ -26,7 +26,7 @@
             <a onclick="" href="<?php echo U('CarepersonList/displayCarePage');?>"><img src="/Public/Home/img/icon/view.png"></a>
             <a onclick="" href="<?php echo U('CarepersonList/displayListenPage');?>"><img src="/Public/Home/img/icon/listener.png"></a>
             <a onclick="" href="<?php echo U('Login/index');?>"><img src="/Public/Home/img/icon/exit.png"></a>
-            <a onclick="alert('该按钮功能暂时未开放')" ><img src="/Public/Home/img/icon/setting.png"></a>
+            <a onclick="" href="<?php echo U('Setting/displaySettingPage');?>" ><img src="/Public/Home/img/icon/setting.png"></a>
             <div id="iSearchDiv">
                 <span></span>
                 <input id="iSearchInput" placeholder="微博用户名/微博ID">
@@ -95,13 +95,28 @@
         <input style="display:none" id="hidden_article_id" value="">
         <input style="display: none;" id="hidden_talk_first" value="">
         <input style="display: none;" id="hidden_talk_count" value="">
+        <input style="display: none;" id="hidden_talk_All_Count" value="">
+        <input style="display: none;" id="hidden_talk_All_Pages" value="">
+        <input style="display: none;" id="hidden_talk_Pre_Pages" value="">
         <input style="display: none;" id="hidden_talk_show_url" value="<?php echo U('BlogMainPage/showTalks');?>">
     </div>
     <div id="btt_EveryoneTalkContent">
         <!--这里添加 DOM-->
     </div>
+
+    <!--这里存放页面按钮-->
+    <div id="btt_PageContent" style="display: none">
+        <input type="button" value="首页" onclick="showMoreTalks(1)">
+        <input type="button" value="前一页" onclick="showMoreTalks(2)">
+        <input type="text" maxlength="6" style="width:50px;" value="1" id="btt_InputUserWantPage">
+        /<sapn id = "btt_AllTalkCount">1</sapn>
+        <input type="button" value="跳转" onclick="showMoreTalks(3)">
+        <input type="button" value="后一页" onclick="showMoreTalks(4)">
+        <input type="button" value="末页" onclick="showMoreTalks(5)">
+    </div>
+
     <!--暂时隐藏 需要的时候拿出来-->
-    <div id="talk_class" class="talk_class" style="display: none;">
+    <div id="talk_class_copy" class="talk_class_copy" style="display: none;">
         <div id="talker_img"><img src="/Public/Home/img/icon/sun.gif"></div>
         <div id="talker_right">
             <div id="talk_nameAndSaid" class="talk_nameAndSaid">宇宙无敌威震天:</div>

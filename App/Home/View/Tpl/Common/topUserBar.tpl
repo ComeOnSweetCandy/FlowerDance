@@ -11,7 +11,7 @@
             <a onclick="" href="{:U('CarepersonList/displayCarePage')}"><img src="__IMG__/icon/view.png"></a>
             <a onclick="" href="{:U('CarepersonList/displayListenPage')}"><img src="__IMG__/icon/listener.png"></a>
             <a onclick="" href="{:U('Login/index')}"><img src="__IMG__/icon/exit.png"></a>
-            <a onclick="alert('该按钮功能暂时未开放')" ><img src="__IMG__/icon/setting.png"></a>
+            <a onclick="" href="{:U('Setting/displaySettingPage')}" ><img src="__IMG__/icon/setting.png"></a>
             <div id="iSearchDiv">
                 <span></span>
                 <input id="iSearchInput" placeholder="微博用户名/微博ID">

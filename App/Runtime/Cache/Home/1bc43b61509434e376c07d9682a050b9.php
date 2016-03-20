@@ -68,7 +68,7 @@
         <div id="bpp_RightContent">
             <div id="opp_BlogsContent">
                 <!--微博的博文板 一块一块的-->
-<link rel="stylesheet" href="/Public/Home/css/blogTextTable.css">
+<link rel="stylesheet" href="/Public/Home/css/blogTextTable.css" xmlns="http://www.w3.org/1999/html">
 <script type="text/javascript" language="javascript" src="/Public/Home/js/blogTextTable.js"></script>
 
 <?php if(is_array($user_blogs)): foreach($user_blogs as $key=>$blog): ?><div id="iBlogTextTableDiv" name = "article_id_<?php echo ($blog["article_id"]); ?>">
@@ -91,10 +91,48 @@
     <div id="iButtonsDiv">
         <a onclick="collectBlog(<?php echo ($blog["article_id"]); ?>,'<?php echo U('OtherPersonPage/collectBlog');?>','<?php echo U('OtherPersonPage/discollectBlog');?>')">收藏<i id="i_CollectionsCount<?php echo ($blog["article_id"]); ?>"><?php echo ($blog["article_collection"]); ?></i><span></span></a>
         <a href="#">转发<span></span></a>
-        <a href="#">评论<i><?php echo ($blog["article_talk"]); ?></i><span></span></a>
+        <a onclick="showTalkBigBar(<?php echo ($blog["article_id"]); ?>)">评论<i><?php echo ($blog["article_talk"]); ?></i><span></span></a>
         <a onclick="agreeBlog(<?php echo ($blog["article_id"]); ?>,'<?php echo U('OtherPersonPage/agreeBlog');?>','<?php echo U('OtherPersonPage/disagreeBlog');?>')">点赞<i id="i_AgreeCount<?php echo ($blog["article_id"]); ?>"><?php echo ($blog["article_agree"]); ?></i><img src=""></a>
     </div>
 </div><?php endforeach; endif; ?>
+
+<!--放在外部 更为清晰一点-->
+<div id="btt_ShowTalkBar" style="display: none;">
+    <div id="btt_InputTalkBar"><textarea id="btt_InputTalkArea" maxlength="140"></textarea></div>
+    <div id="btt_TalkButtonBar">
+        <input id="btt_TalkSubmitButton" type="button" value="评论" onclick="submitTalk('<?php echo U('BlogMainPage/submitTalk');?>')" />
+        <input style="display:none" id="hidden_article_id" value="">
+        <input style="display: none;" id="hidden_talk_first" value="">
+        <input style="display: none;" id="hidden_talk_count" value="">
+        <input style="display: none;" id="hidden_talk_All_Count" value="">
+        <input style="display: none;" id="hidden_talk_All_Pages" value="">
+        <input style="display: none;" id="hidden_talk_Pre_Pages" value="">
+        <input style="display: none;" id="hidden_talk_show_url" value="<?php echo U('BlogMainPage/showTalks');?>">
+    </div>
+    <div id="btt_EveryoneTalkContent">
+        <!--这里添加 DOM-->
+    </div>
+
+    <!--这里存放页面按钮-->
+    <div id="btt_PageContent" style="display: none">
+        <input type="button" value="首页" onclick="showMoreTalks(1)">
+        <input type="button" value="前一页" onclick="showMoreTalks(2)">
+        <input type="text" maxlength="6" style="width:50px;" value="1">
+        /<sapn id = "btt_AllTalkCount">1</sapn>
+        <input type="button" value="跳转" onclick="showMoreTalks(3)">
+        <input type="button" value="后一页" onclick="showMoreTalks(4)">
+        <input type="button" value="末页" onclick="showMoreTalks(5)">
+    </div>
+
+    <!--暂时隐藏 需要的时候拿出来-->
+    <div id="talk_class" class="talk_class" style="display: none;">
+        <div id="talker_img"><img src="/Public/Home/img/icon/sun.gif"></div>
+        <div id="talker_right">
+            <div id="talk_nameAndSaid" class="talk_nameAndSaid">宇宙无敌威震天:</div>
+            <div id="talk_timeAnd" class="talk_timeAnd">123321321</div>
+        </div>
+    </div>
+</div>
             </div>
         </div>
     </div>

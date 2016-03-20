@@ -149,7 +149,9 @@ class BlogMainPageController extends Controller
         $c = I("post.c");
 
         $talkDb = new SubmitTalkModel("talk");
+        $resCount = $talkDb->getTalkCount($article_id);
         $res = $talkDb->getTalk($article_id,$f,$c);
+        $res[0]["count"]=$resCount;
         $this->ajaxReturn($res,"json");
     }
 }

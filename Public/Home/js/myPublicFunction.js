@@ -40,3 +40,19 @@ function MYAjaxSubmit(url,submitWay,data,respondFunc)
         }
     }
 }
+
+function MYAjaxSubmitImg(url,submitWay,data,respondFunc)
+{
+    var oData = new FormData(document.forms.namedItem("fileinfo" ));
+    oData.append( "CustomField", "This is some extra data" );
+    var oReq = new XMLHttpRequest();
+    oReq.open( "POST", "stash.php" , true );
+    oReq.onload = function(oEvent) {
+        if (oReq.status == 200) {
+            oOutput.innerHTML = "Uploaded!" ;
+        } else {
+            oOutput.innerHTML = "Error " + oReq.status + " occurred uploading your file.<br \/>";
+        }
+    };
+    oReq.send(oData);
+}

@@ -9,7 +9,7 @@
 // | Author: 麦当苗儿 <zuojiazi@vip.qq.com> <http://www.zjzit.cn>
 // +----------------------------------------------------------------------
 
-namespace Think\Upload\Driver;
+namespace Think\Uploads\Driver;
 class Local{
     /**
      * 上传文件根目录
