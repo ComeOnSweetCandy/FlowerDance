@@ -27,7 +27,7 @@
             <p><input type="text" name="user" placeholder="Email" id="idUserEmail" value=""></p>
             <p><input type="password" name="password" placeholder="Password" id="idUserPassword" value=""></p>
             <p id="inputButtonDiv">
-                <input type="button" name="regesitButton" value="注册" id="idRegisterButton">
+                <input type="button" name="regesitButton" value="注册" id="idRegisterButton" onclick="window.location.href='{:U('Register/index')}'">
                 <input type="hidden" id="idLocationContent" value="{__APP__}">
                 <input type="button" name="{:U("confirmLoginAction")}" value="登录" id="idLoginButton"></p>
         </form>
