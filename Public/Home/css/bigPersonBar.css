@@ -1,0 +1,93 @@
+#bpb_AllContent
+{
+    width: 100%;
+    height: auto;
+    margin-top: 5px;
+}
+
+#bpb_AllContent #bpb_CenterContent
+{
+    width: 1000px;
+    height: 270px;
+    background: url("../img/back/back1.jpg") repeat;
+    margin: 0 auto;
+    position: relative;
+}
+
+#bpb_AllContent #bpb_CenterContent #bpb_CareButton
+{
+    width: 1000px;
+    height: 60px;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+}
+
+#bpb_AllContent #bpb_CenterContent #bpb_CareButton #bpb_CareIgnoreButton
+{
+    width: 200px;
+    height: 40px;
+    border: none;
+    text-align: center;
+    font-size: 21px;
+    border-radius: 3px;
+
+    box-shadow: 2px 4px 5px rgba(0,0,0,0.75);
+    border-bottom: 1px solid #7f7f7f;
+    text-shadow: 0px 1px 0px rgba(0,0,0,0.75);
+}
+
+#bpb_AllContent #bpb_CenterContent #bpb_SingDiv
+{
+    height: 21px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;;
+    font-size: 17px;
+    line-height: 21px;
+    font-family: 黑体;
+    top: 7px;
+}
+
+#bpb_AllContent #bpb_CenterContent #bpb_ImgDiv
+{
+    margin: 0 auto;
+    width: 120px;
+    height: 120px;
+    background-color: red;
+    border-radius: 90px;
+    overflow: hidden;
+    position: relative;
+    top: 20px;
+}
+
+#bpb_AllContent #bpb_CenterContent #bpb_NameDiv
+{
+    height: 30px;
+    top:20px;
+    position: relative;
+    text-align: center;;
+    font-size: 27px;
+    line-height: 30px;
+    font-family: 微软雅黑;
+    vertical-align: center;
+}
+
+#bpb_AllContent #bpb_CenterContent #bpb_NameDiv p
+{
+    display: inline-block;
+    margin: 0px;
+    vertical-align: top;
+}
+
+#bpb_AllContent #bpb_CenterContent #bpb_NameDiv img
+{
+}
+
+#bpb_AllContent #bpb_CenterContent #bpb_ImgDiv #bpb_UserImg
+{
+    width: 120px;
+    height: 120px;
+
+}

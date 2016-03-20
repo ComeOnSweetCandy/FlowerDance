@@ -1,0 +1,88 @@
+
+#iSinglePerosonBar
+{
+    width: 750px;
+    height: auto;
+    margin: 5px auto;
+    position: relative;
+    background: url("../img/back/back5.jpg") repeat;
+}
+
+#iSinglePerosonBar input
+{
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.75);
+    border-bottom: 2px solid black;
+    border-radius: 3px;
+}
+
+#iSinglePerosonBar #iQuickCareButton
+{
+    display: block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #00ee00;
+    cursor: pointer;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    z-index: 999;
+    border-radius: 1px;
+    border: none;
+}
+
+#iSinglePerosonBar  #iQuickIgnoreButton
+{
+    display: block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #ee0f00;
+    cursor: pointer;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    z-index: 999;
+    border-radius: 1px;
+    border: none;
+}
+
+#iSinglePerosonBar #iSinglePersonInfo
+{
+    width: 440px;
+    height: 120px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#iSinglePerosonBar #iSinglePersonImg
+{
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+}
+
+#iSinglePerosonBar #iSinglePersonImg #iPersonHeadImg
+{
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0px auto;
+    position: relative;
+    top: 20px;
+}
+
+#iSinglePersonName a
+{
+    text-decoration: none;
+    font-weight: 700;
+    
+}
+#iSinglePersonName a:link{
+    color: black;}
+#iSinglePersonName a:havor{
+    color: black;}
+#iSinglePersonName a:visited {
+    color: black;}
+#iSinglePersonName a:active {
+    color: darkgreen;}

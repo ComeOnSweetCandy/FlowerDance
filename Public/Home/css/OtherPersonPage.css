@@ -1,0 +1,46 @@
+#opp_BottomContent
+{
+    width: 1000px;
+    height: 1000px;
+    margin: 5px auto;
+}
+
+#opp_BottomContent #bpp_LeftContent
+{
+    width: 330px;
+    height: 400px;
+    float: left;
+}
+
+#opp_BottomContent #bpp_LeftContent #opp_CareContent
+{
+    width: 315px;
+    height: 66px;
+    background: url("../img/back/back1.jpg");
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#opp_BottomContent #bpp_LeftContent #opp_CareContent div
+{
+    display: inline-block;
+    width: 105px;
+    float: left;
+    height: 66px;
+    line-height: 66px;
+    text-align: center;
+}
+
+#opp_BottomContent #bpp_RightContent
+{
+    width: 670px;
+    float: left;
+}
+
+#opp_BottomContent #bpp_RightContent #opp_BlogsContent
+{
+    width: 655px;
+    height: 2000px;
+    margin-left: -5px;
+    margin-top: 10px;
+}

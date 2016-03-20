@@ -1,0 +1,104 @@
+#iTopBarContent
+{
+    background: url("../img/back/back8.png") repeat;
+    width: 100% ;
+    height: 40px ;
+    border-radius: 3px;
+}
+
+#iTopBarContent #iFixedWidth
+{
+    width: 1000px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+#iTopBarContent #iFixedWidth #iLogo
+{
+    display: block;
+    float: left;
+    font-size: 30px;
+    height: 40px;
+    width: 200px;
+    background: url("../img/icon/newBlogLogo.png");
+}
+
+#iTopBarContent #iFixedWidth #iRightBar
+{
+    float: right;
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+#iTopBarContent #iFixedWidth #iRightBar a
+{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 0px 0px;
+}
+
+#iTopBarContent #iFixedWidth a img
+{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    left: 5px;
+}
+
+#iTopBarContent #iFixedWidth #iRightBar #iUserName
+{
+    display: inline-block;
+    width: auto;
+    height: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    margin: 0px;
+    vertical-align: top;
+    color: white;
+}
+
+#iTopBarContent #iFixedWidth #iRightBar #iSearchDiv
+{
+    display: inline-block;
+    width: auto;
+    height: 40px;
+    vertical-align: top;
+}
+
+#iTopBarContent #iFixedWidth #iRightBar #iSearchDiv span
+{
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+    width: 0px;
+}
+
+#iTopBarContent #iFixedWidth #iRightBar #iSearchDiv #iSearchInput
+{
+    width: 150px;
+    border: 1px solid #dedede;
+    background-color: #f1ffda;
+    height: 25px;
+    line-height: 30px;
+    font-size: 13px;
+    margin: 0px;
+    vertical-align: middle;
+}
+
+#iTopBarContent #iFixedWidth #iRightBar #iSearchDiv #iSearchButton
+{
+    width: 27px;
+    height:27px;
+    border: 1px solid #dedede;
+    border-left: none;
+    vertical-align: middle;
+    position: relative;
+    bottom:0px;
+    right: 6px;
+    cursor: pointer;
+}

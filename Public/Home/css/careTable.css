@@ -1,0 +1,66 @@
+
+#iSinglePerosonBar
+{
+    width: auto;
+    height: auto;
+    border-bottom:1px solid black;
+    border-right:1px solid black;
+    position: relative;
+}
+
+#iSinglePerosonBar #iQuickCareButton
+{
+    display: block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #00ee00;
+    cursor: pointer;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    z-index: 999;
+    border-radius: 1px;
+    border: none;
+}
+
+#iSinglePerosonBar  #iQuickIgnoreButton
+{
+    display: block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #ee0f00;
+    cursor: pointer;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    z-index: 999;
+    border-radius: 1px;
+    border: none;
+}
+
+#iSinglePerosonBar #iSinglePersonInfo
+{
+    width: 540px;
+    height: 120px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#iSinglePerosonBar #iSinglePersonImg
+{
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+}
+
+#iSinglePerosonBar #iSinglePersonImg #iPersonHeadImg
+{
+    width: 80px;
+    height: 80px;
+    display: block;
+    margin: 0px auto;
+    position: relative;
+    top: 20px;
+}

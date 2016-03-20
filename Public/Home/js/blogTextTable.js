@@ -1,0 +1,211 @@
+window.onload = function()
+{
+    document.getElementsByClassName("iDeleteBlogButton").onclick = function()
+    {
+        alert("ufe");
+        console.log("this is a test :\n ");
+        console.log(this.parent);
+    }
+}
+
+function deleteBlogFunction(task)
+{
+    //首先获取其ID值
+    var article_id = task.getAttribute("name");
+    var stringArray = article_id.split("_");
+    var deleteBlogID = stringArray[2];
+    var data = "articleID="+deleteBlogID;
+
+    console.log("tag 2");
+    console.log(data);
+
+    MYAjaxSubmit("deleteMyBlog",2,data,function(str)
+    {
+        if(str==1)
+        {
+            //删除成功
+            var deleteNode = document.getElementsByName("article_id_"+deleteBlogID)[0];
+            deleteNode.parentNode.removeChild(deleteNode);
+        }
+        else if(str==0)
+        {
+            //查无此微博
+        }
+    });
+}
+
+//收藏该博文
+function collectBlog(blogId,url,deleteUrl)
+{
+    var sendString = "blogId="+blogId;
+    MYAjaxSubmit(url,2,sendString,function(str)
+    {
+        if(str==1)
+        {
+            var count = document.getElementById("i_CollectionsCount"+blogId).innerHTML;
+            count = parseInt(count);
+            count=count+1;
+            var count = document.getElementById("i_CollectionsCount"+blogId).innerHTML = count;
+        }
+        else if(str==0)
+        {
+            //alert("您已经收藏过该篇广播,是否需要取消收藏",true,false);
+            var res = confirm("您已经收藏过该篇广播,是否需要取消收藏");
+            if(res==true)
+            {
+                //取消收藏广播
+                discollectBlog(blogId,deleteUrl);
+            }
+            else if(res==false)
+            {
+                //不取消收藏广播
+            }
+        }
+    });
+}
+
+function discollectBlog(blogId,url)
+{
+    var sendString = "blogId="+blogId;
+    MYAjaxSubmit(url,2,sendString,function(str)
+    {
+        if(str==1)
+        {
+            //取消收藏 的显示 -1
+            var count = document.getElementById("i_CollectionsCount"+blogId).innerHTML;
+            count = parseInt(count);
+            count=count-1;
+            var count = document.getElementById("i_CollectionsCount"+blogId).innerHTML = count;
+        }
+        else if(str==0)
+        {
+            //出错什么都不做
+        }
+    });
+}
+
+//点赞该微博 、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、、
+function agreeBlog(blogId,url,deleteUrl)
+{
+    var sendString = "blogId="+blogId;
+    MYAjaxSubmit(url,2,sendString,function(str)
+    {
+        if(str==1)
+        {
+            var count = document.getElementById("i_AgreeCount"+blogId).innerHTML;
+            count = parseInt(count);
+            count=count+1;
+            var count = document.getElementById("i_AgreeCount"+blogId).innerHTML = count;
+        }
+        else if(str==0)
+        {
+            //alert("您已经点赞过该篇广播,是否需要取消点赞",true,false);
+            var res = confirm("您已经点赞过该篇广播,是否需要取消点赞");
+            if(res==true)
+            {
+                //取消点赞广播
+                disagreeBlog(blogId,deleteUrl);
+            }
+            else if(res==false)
+            {
+                //不取消点赞广播
+            }
+        }
+    });
+}
+
+function disagreeBlog(blogId,url)
+{
+    var sendString = "blogId="+blogId;
+    MYAjaxSubmit(url,2,sendString,function(str)
+    {
+        if(str==1)
+        {
+            //取消点赞 的显示 -1
+            var count = document.getElementById("i_AgreeCount"+blogId).innerHTML;
+            count = parseInt(count);
+            count=count-1;
+            var count = document.getElementById("i_AgreeCount"+blogId).innerHTML = count;
+        }
+        else if(str==0)
+        {
+            //出错什么都不做
+        }
+    });
+}
+
+function showTalkBigBar(task)
+{
+    var talkBar = document.getElementById("btt_ShowTalkBar");
+    var display = talkBar.style.display;
+
+    var baseNode = document.getElementsByName("article_id_"+task)[0];
+    baseNode.appendChild(talkBar);
+
+    if(display=="none")
+    {
+        talkBar.style.display = "block";
+        document.getElementById("hidden_article_id").setAttribute("value",task);
+
+        //首先获取评论数
+        document.getElementById("hidden_talk_first").value = 0;
+        document.getElementById("hidden_talk_count").value = 20;
+
+        getTalks(task);
+    }
+    else if(display=="block")
+    {
+        talkBar.style.display = "none";
+
+        //最一些清理工作
+        var baseNode = document.getElementById("btt_EveryoneTalkContent");
+        var nodeList = baseNode.getElementsByClassName("talk_class");
+        var length =nodeList.length;
+
+        for(var i in nodeList)
+        {
+            baseNode.removeChild(nodeList[0]);
+        }
+    }
+}
+
+function getTalks(task)
+{
+    var url = document.getElementById("hidden_talk_show_url").value;
+    var sendString = "articleId="+task+"&f="+document.getElementById("hidden_talk_first").value+"&c="+ document.getElementById("hidden_talk_count").value;
+
+    MYAjaxSubmit(url,2,sendString,function(str)
+    {
+        var baseNode = document.getElementById("btt_EveryoneTalkContent");
+        var waitCopyNode = document.getElementById("talk_class");
+
+        var obj = JSON.parse(str);
+        var objLength = obj.length;
+
+        for(var i in obj)
+        {
+            var newNode = waitCopyNode.cloneNode(true);
+            newNode.style.display = "block";
+            baseNode.appendChild(newNode);
+            newNode.getElementsByClassName("talk_nameAndSaid")[0].innerHTML = obj[i]["user_name"]+":<span style='color: black'>"+obj[i]["talk_content"]+"</span>";
+            newNode.getElementsByClassName("talk_timeAnd")[0].innerHTML = getLocalTime(obj[i]["talk_time"]);
+        }
+    });
+}
+
+function submitTalk(url)
+{
+    var article_id = document.getElementById("hidden_article_id").getAttribute("value");
+    var talk_content = document.getElementById("btt_InputTalkArea").value;
+    var sendString = "articleId="+article_id+"&talkContent="+talk_content;
+
+    MYAjaxSubmit(url,2,sendString,function(str)
+    {
+
+    });
+}
+
+function getLocalTime(nS)
+{
+    return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/,' ');
+}

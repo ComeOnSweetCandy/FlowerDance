@@ -1,0 +1,57 @@
+html,body
+{
+    margin: 0px;
+    padding:0px;
+    border: 0px;
+    text-decoration: none;
+}
+
+html
+{
+    background: url("../img/mainPageBackground.png") repeat-x rgb(147,197,234);
+}
+
+#idAllContent
+{
+    width: 100%;
+    height: auto;
+}
+
+#idAllContent #iScrollingAllContent
+{
+    width: 1000px;
+    height: auto;
+    margin: 5px auto;
+    height: 3000px;
+    border: 0px;
+}
+
+#idAllContent #iScrollingAllContent #iScrollingLeftContent
+{
+    width: 670px;
+    height: auto;
+    float: left;
+}
+
+#idAllContent #iScrollingAllContent #iScrollingLeftContent #iLeftResultsContent
+{
+    width: 100%;
+    height: auto;
+    background: url("../img/back/back5.jpg");
+}
+
+#idAllContent #iScrollingAllContent #iScrollingRightContent
+{
+    border: 0px;
+    width: 330px;
+    height: auto;
+    float: left;
+}
+
+#idAllContent #iScrollingAllContent #iScrollingRightContent #iRightHistorySearch
+{
+    width: 95%;
+    height: 600px;
+    margin-left: 10px;
+    background: url("../img/back/back8.png");
+}

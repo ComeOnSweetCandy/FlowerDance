@@ -1,0 +1,182 @@
+html,body
+{
+    margin:0px;
+    padding:0px;
+    border: 0px;
+    height:auto;
+    width: 100%;
+    height: 2000px;
+}
+
+#backgroundImg,#backgroundImg2
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+#iAllContent
+{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+#iLogoContent
+{
+    text-align: center;
+    width: 100%;
+    min-width: 600px;
+    height: 230px;
+    /*background-color: #00ee00;*/
+}
+
+#iLogoContent span
+{
+    margin: 0px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#iLogoContent img
+{
+    height: 92px;
+    width: 250px;
+    vertical-align: middle;
+}
+
+#iCenterContent
+{
+    width: 100%;
+    /*background-color: red;*/
+    text-align: center;
+}
+
+#iCenterContentDiv
+{
+    width: 900px;
+    height: 700px;
+    background-color: #fff7fb;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+#iCenterContentDiv #iHelpBox
+{
+    float: left;
+    width: 350px;
+    height: 680px;
+    margin: 7px;
+}
+
+#iCenterContentDiv #iHelpBox span
+{
+    display: inline-block;
+    width: 1px;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#iCenterContentDiv #iHelpBox #iRightSplitString
+{
+    width: 1px;
+    height:90%;
+    background-color: #777777;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    right: 10px;
+}
+
+#iCenterContentDiv #iRegisterBox
+{
+    float: left;
+    width: 520px;
+    height: 680px;
+    margin: 6px;
+}
+
+#iCenterContentDiv #iRegisterBox #iGuideBox
+{
+    width:100%;
+    height: 60px;
+    line-height: 60px;
+    text-align: left;
+    font-size: 38px;
+    font-family:黑体;
+    vertical-align: center;
+}
+
+#iCenterContentDiv #iRegisterBox #iGuideBox p
+{
+    margin: 0;
+    padding: 0px;
+}
+
+#iCenterContentDiv #iRegisterBox #iRegisterList
+{
+    width: 100%;
+    height:620px ;
+}
+
+#iCenterContentDiv #iRegisterBox #iRegisterList #iSplitString
+{
+    width: 90%;
+    height: 1px;
+    margin: 0px 2px ;
+    background-color: #777777;
+    border-radius: 90px;
+}
+
+#iCenterContentDiv #iRegisterBox #iRegisterList #iRegisterTables
+{
+    width: 520px;
+    height: 530px;
+    padding: 2px;
+}
+
+#iCenterContentDiv #iRegisterBox #iRegisterList #iRegisterTables #iRegisterTable
+{
+    font-family: 微软雅黑;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+
+#iCenterContentDiv #iRegisterBox #iRegisterList #iRegisterTables #iRegisterTable th
+{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+
+#iCenterContentDiv #iRegisterBox #iRegisterList #iRegisterTables #iRegisterTable tr
+{
+    height: 100px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+#iCenterContentDiv #iRegisterBox #iRegisterList #iRegisterTables #iRegisterTable tr .firstC
+{
+    text-align: right;
+}
+
+#iCenterContentDiv #iRegisterBox #iRegisterList #iRegisterTables #iRegisterTable tr .prompt
+{
+    width:250px ;
+}
+
+
+#iBottomContent
+{
+    width: 100%;
+    height: 100px;
+    /*background-color: black;*/
+}

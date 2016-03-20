@@ -1,0 +1,244 @@
+#iBlogTextTableDiv
+{
+    width: 655px;
+    height: auto;
+    background: url("../img/back/back3.jpg") repeat;
+    margin: 10px 10px;
+    padding: 0px;
+    border: none;
+    border-radius: 3px;
+    position: relative;
+}
+
+#iBlogTextTableDiv #iDeleteButton
+{
+    position: absolute;
+    right: 5px;
+    top:5px;
+    font-size: 12px;
+    z-index: 9;
+}
+
+#iBlogTextTableDiv #iDeleteButton a
+{
+    text-decoration: none;
+}
+
+#iBlogTextTableDiv #iTopTableDiv
+{
+    width: 100%;
+    height: auto;
+    border: none;
+    margin: 0px;
+    position: relative;
+}
+
+#iBlogTextTableDiv #iTopTableDiv #iFloatRightButton
+{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+#iBlogTextTableDiv #iTopTableDiv #iImageDiv
+{
+    height: auto;
+    border: none;
+    margin: 0px;
+    padding: 5px;
+    display: inline-block;
+}
+
+#iBlogTextTableDiv #iTopTableDiv #iNameContentTimeDiv
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#iBlogTextTableDiv #iTopTableDiv #iNameContentTimeDiv #iNameDiv
+{
+    margin:10px 0px 5px 0px;
+    font-size: 18px;
+    font-family: 微软雅黑;
+}
+
+#iBlogTextTableDiv #iTopTableDiv #iNameContentTimeDiv #iTimeDiv
+{
+    font-size: 12px;
+
+}
+
+#iBlogTextTableDiv #iTopTableDiv #iNameContentTimeDiv #iBlogContentDiv
+{
+    width: 590px;
+    font-size: 16px;
+    margin: 0px 0px 10px 0px;
+    font-family: 黑体;
+}
+
+#iBlogTextTableDiv #iTopTableDiv #iImageDiv img
+{
+    width: 50px;
+    height: 50px;
+    display: block;
+    border: none;
+    border-radius: 90px;
+}
+
+#iBlogTextTableDiv #iButtonsDiv
+{
+    margin: 0px;
+    width: 100%;
+    height: 40px;
+    border: 0px;
+    border-top: 1px solid #cdcdcd;
+    text-align: center;
+}
+
+#iBlogTextTableDiv #iButtonsDiv a
+{
+    text-decoration: none;
+    line-height: 40px;
+    font-size: 14px;
+    display: inline-block;
+    width: 24%;
+    border: none;
+    vertical-align: middle;
+    position: relative;
+}
+
+#iBlogTextTableDiv #iButtonsDiv span
+{
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    vertical-align: middle;
+    background-color: #cdcdcd;
+    position: absolute;
+    right: 0px;
+    top:10px;
+}
+
+#iBlogTextTableDiv  a:link
+{
+    color: #7d8374;
+}
+#iBlogTextTableDiv  a:visited
+{
+    color: #7d8374;
+}
+#iBlogTextTableDiv  a:hover
+{
+    color: #ffb48c;
+}
+#iBlogTextTableDiv  a:active
+{
+    color: #ffb48c;
+}
+
+/*这里是评论框的css*/
+#iBlogTextTableDiv #btt_ShowTalkBar
+{
+    width: 655px;
+    border-top: 1px solid black;
+    position: relative;
+}
+
+#iBlogTextTableDiv #btt_ShowTalkBar #btt_EveryoneTalkContent
+{
+    width: 655px;
+    height: auto;
+    border-bottom: 1px solid black;
+    margin-top: 7px;
+}
+
+#iBlogTextTableDiv #btt_ShowTalkBar #btt_EveryoneTalkContent .talk_class
+{
+    width: 625px;
+    margin: 0 auto;
+    height: auto;
+    border-bottom: 1px solid #bab7c5;
+}
+
+#iBlogTextTableDiv #btt_ShowTalkBar #btt_EveryoneTalkContent .talk_class #talker_right
+{
+    display: inline-block;
+    width: 548px;
+    margin: 0px;
+    vertical-align: top;
+}
+
+#iBlogTextTableDiv #btt_ShowTalkBar #btt_EveryoneTalkContent .talk_class #talk_nameAndSaid
+{
+    width: 500px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    color: #c56266;
+}
+
+#iBlogTextTableDiv #btt_ShowTalkBar #btt_EveryoneTalkContent .talk_class #talk_timeAnd
+{
+    width: 500px;
+    height: auto;
+    display: inline-block;
+    font-size: 11px;
+    color: #7f7f7f;
+}
+
+#iBlogTextTableDiv #btt_ShowTalkBar #btt_EveryoneTalkContent .talk_class #talker_img
+{
+    width: 60px;
+    display: inline-block;
+    margin: 0px;
+    padding: 5px;
+    position: relative;
+    text-align: center;
+}
+
+#iBlogTextTableDiv #btt_ShowTalkBar #btt_EveryoneTalkContent .talk_class #talker_img img
+{
+    width: 45px;
+    height: 45px;
+}
+
+#iBlogTextTableDiv #btt_ShowTalkBar #btt_TalkButtonBar
+{
+    width: 100%;
+    height: 40px;
+    vertical-align: middle;
+    position: relative;
+    border-bottom: 1px solid #9d9e9d;
+}
+
+#iBlogTextTableDiv #btt_ShowTalkBar #btt_TalkButtonBar #btt_TalkSubmitButton
+{
+    width: 100px;
+    height: 35px;
+    border: none;
+    background-color: #22fc1f;
+    position: absolute;
+    right: 15px;
+    top:2px;
+
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.75);
+}
+
+#iBlogTextTableDiv #btt_ShowTalkBar #btt_InputTalkBar
+{
+    width: 655px;
+    margin: 0px;
+    height: auto;
+}
+
+#iBlogTextTableDiv #btt_ShowTalkBar #btt_InputTalkBar #btt_InputTalkArea
+{
+    width: 635px;
+    display: block;
+    margin: 5px auto;
+    height: 60px;
+    background-color: #fbf9ff;
+    border: 1px solid #9d9e9d;
+    resize: none;
+}

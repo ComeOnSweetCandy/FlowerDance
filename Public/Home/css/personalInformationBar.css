@@ -1,0 +1,62 @@
+#iPersonalInformationDiv
+{
+    width: 315px;
+    margin: 10px 5px;
+    height: 100%;
+    border: 1px ;
+}
+
+#iPersonalInformationDiv #iBloguser
+{
+
+}
+
+#iPersonalInformationDiv #iMyselfInfo
+{
+    width:313px;
+    height: 220px;
+    background: url("../img/infoBack.jpg") no-repeat white;
+    border-radius: 2px;
+    position: relative;
+}
+
+#iPersonalInformationDiv #iMyselfInfo #iUserQuickButtonBar
+{
+    text-align: center;
+    margin: 0 auto;
+    border: none;
+    position: absolute;
+    bottom:0px;
+    width: 313px;
+}
+
+#iPersonalInformationDiv #iMyselfInfo #iUserQuickButtonBar input
+{
+    width: 25%;
+    height: 50px;
+    border: none;
+    line-height: 50px;
+    margin: 0px;
+    padding:0px;
+    display: inline-block;
+    float: left;
+}
+
+#iPersonalInformationDiv #iMyselfInfo #iUserName
+{
+    text-align: center;
+    margin: 0 auto;
+    position: relative;
+    top:60px;
+}
+
+#iPersonalInformationDiv #iMyselfInfo #iUserImg
+{
+    width: 70px;
+    height: 70px;
+    background:url("../img/icon/agree_small.jpg") no-repeat ;
+    margin: 0 auto;
+    position: relative;
+    top: 55px;
+    border-radius: 90px;
+}

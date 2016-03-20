@@ -1,0 +1,96 @@
+#dp_BottomContent
+{
+    width: 100%;
+    height: 1280px;
+}
+
+#dp_BottomContent #dp_CenterContent
+{
+    width: 1000px;
+    height: 1000px;
+    margin: 10px auto;
+}
+
+#dp_BottomContent #dp_CenterContent #dp_LabelContent
+{
+    width: 150px;
+    height: 600px;
+    margin: 0px;
+    padding: 0px;
+    background: url("../img/back/back8.png") repeat;
+    display: inline-block;
+    float: left;
+    vertical-align: top;
+    border-top-left-radius: 4px;
+    border-right: 1px solid black;
+}
+
+#dp_BottomContent #dp_CenterContent #dp_LabelContent #dp_MyCare
+{
+    width: 150px;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#dp_BottomContent #dp_CenterContent #dp_LabelContent div
+{
+    width: 150px;
+    height: 50px;
+    line-height: 50px;
+    margin-top: 20px;
+    background: url("../img/back/back3.jpg") repeat;
+    position: relative;
+    z-index: 1;
+}
+
+#dp_BottomContent #dp_CenterContent #dp_LabelContent div a
+{
+    width: 146px;
+    height: 50px;
+    font-family: 黑体;
+    font-size: 24px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+
+#dp_BottomContent #dp_CenterContent #dp_ListContent
+{
+    width: 846px;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    background: url("../img/back/back3.jpg") repeat;
+    display: inline-block;
+    float: left;
+    vertical-align: top;
+    background-color: red;
+}
+
+#dp_BottomContent #dp_CenterContent #dp_ListContent #dp_BASEHEIGHT
+{
+    width: 0px;
+    height: 1400px;
+    float: left;
+}
+
+#dp_BottomContent #dp_CenterContent #dp_ListContent #dp_BottomListContent
+{
+}
+
+#dp_BottomContent #dp_CenterContent #dp_ListContent #dp_ListTopContent
+{
+    width: 846px;
+    height: 50px;
+    background: url("../img/back/back3.jpg") repeat;
+}
+
+#dp_BottomContent #dp_CenterContent #dp_ListContent #dp_ListTopContent #dp_TopGuid
+{
+    width: 750px;
+    margin: 0 auto;
+    height: 50px;
+    border-bottom: 1px solid black;
+    line-height: 50px;
+}
