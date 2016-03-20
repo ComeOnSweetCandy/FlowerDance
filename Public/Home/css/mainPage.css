@@ -51,7 +51,7 @@ html
     position: relative;
 }
 
-#idAllContent #iScrollingAllContent #iScrollingLeftContent #smp_SeeModel div input
+#idAllContent #iScrollingAllContent #iScrollingLeftContent #smp_SeeModel div a
 {
     height: 30px;
     width: 100%;
@@ -59,6 +59,11 @@ html
     position: absolute;
     bottom:0px;
     background-color: #fc3547;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    text-decoration:none;
+    color: black;
 
     box-shadow: 1px 1px 2px rgba(0,0,0,0.75);
     text-shadow: 1px 0px 1px rgba(0,0,0,0.75);
@@ -69,6 +74,7 @@ html
 #idAllContent #iScrollingAllContent #iScrollingLeftContent #smp_SeeModel div #smp_ModelButtonType
 {
     height: 38px;
+    line-height: 38px;
     background-color: #22fc1f;
 }
 

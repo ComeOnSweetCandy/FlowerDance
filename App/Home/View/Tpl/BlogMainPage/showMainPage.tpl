@@ -20,9 +20,9 @@
             <include file="Common/submitBlogBar" />
             <div id="smp_SeeModel">
                 <div style="display: none;" id="smp_HiddenPageMode">{$pageInfo.pageMode}</div>
-                <div><input id="<if condition = '$pageInfo.pageMode eq 1'>smp_ModelButtonType</if>" type="button" value="个人广播" onclick="window.location.href='{:U('BlogMainPage/showMainPage')}'" /></div>
-                <div><input id="<if condition = '$pageInfo.pageMode eq 3'>smp_ModelButtonType</if>" type="button" value="公众广播" onclick="window.location.href='{:U('BlogMainPage/showCarePersonsBlogs')}'" /></div>
-                <div><input id="<if condition = '$pageInfo.pageMode eq 4'>smp_ModelButtonType</if>" type="button" value="收藏广播" onclick="window.location.href='{:U('BlogMainPage/showCollectionBlogs')}'" /></div>
+                <div><a id="<if condition = '$pageInfo.pageMode eq 1'>smp_ModelButtonType</if>" type="button" value="个人广播" href='{:U('BlogMainPage/showMainPage')}'>个人广播</a></div>
+                <div><a id="<if condition = '$pageInfo.pageMode eq 3'>smp_ModelButtonType</if>" type="button" value="公众广播" href='{:U('BlogMainPage/showCarePersonsBlogs')}'>公众广播</a></div>
+                <div><a id="<if condition = '$pageInfo.pageMode eq 4'>smp_ModelButtonType</if>" type="button" value="收藏广播" href='{:U('BlogMainPage/showCollectionBlogs')}'>收藏广播</a></div>
             </div>
             <include file="Common/blogTextTable" />
             <include file="Common/loadMore" />

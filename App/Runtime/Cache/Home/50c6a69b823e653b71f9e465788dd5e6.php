@@ -54,9 +54,9 @@
 </div>
             <div id="smp_SeeModel">
                 <div style="display: none;" id="smp_HiddenPageMode"><?php echo ($pageInfo["pageMode"]); ?></div>
-                <div><input id="<?php if($pageInfo["pageMode"] == 1): ?>smp_ModelButtonType<?php endif; ?>" type="button" value="个人广播" onclick="window.location.href='<?php echo U('BlogMainPage/showMainPage');?>'" /></div>
-                <div><input id="<?php if($pageInfo["pageMode"] == 3): ?>smp_ModelButtonType<?php endif; ?>" type="button" value="公众广播" onclick="window.location.href='<?php echo U('BlogMainPage/showCarePersonsBlogs');?>'" /></div>
-                <div><input id="<?php if($pageInfo["pageMode"] == 4): ?>smp_ModelButtonType<?php endif; ?>" type="button" value="收藏广播" onclick="window.location.href='<?php echo U('BlogMainPage/showCollectionBlogs');?>'" /></div>
+                <div><a id="<?php if($pageInfo["pageMode"] == 1): ?>smp_ModelButtonType<?php endif; ?>" type="button" value="个人广播" href='<?php echo U('BlogMainPage/showMainPage');?>'>个人广播</a></div>
+                <div><a id="<?php if($pageInfo["pageMode"] == 3): ?>smp_ModelButtonType<?php endif; ?>" type="button" value="公众广播" href='<?php echo U('BlogMainPage/showCarePersonsBlogs');?>'>公众广播</a></div>
+                <div><a id="<?php if($pageInfo["pageMode"] == 4): ?>smp_ModelButtonType<?php endif; ?>" type="button" value="收藏广播" href='<?php echo U('BlogMainPage/showCollectionBlogs');?>'>收藏广播</a></div>
             </div>
             <!--微博的博文板 一块一块的-->
 <link rel="stylesheet" href="/Public/Home/css/blogTextTable.css" xmlns="http://www.w3.org/1999/html">
