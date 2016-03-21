@@ -34,8 +34,8 @@ return array(
     'DB_NAME'=>'pandablog',
 
     //开启调试模式
-    'APP_STATUS' => 'debug',
-    'SHOW_PAGE_TRACE'=>true,
+    //'APP_STATUS' => 'debug',
+    //'SHOW_PAGE_TRACE'=>true,
 
     //重写模式 URL模式
     "URL_MODULE"=>3,

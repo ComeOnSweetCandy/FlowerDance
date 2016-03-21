@@ -1,182 +1,227 @@
-html,body
+body,html
 {
-    margin:0px;
-    padding:0px;
-    border: 0px;
-    height:auto;
-    width: 100%;
-    height: 2000px;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    text-decoration: none;
 }
 
-#backgroundImg,#backgroundImg2
+html
 {
+    background: url("../img/mainPageBackground.png") repeat-x rgb(147,197,234);
+    width: 100%;
+    height: 100%;
+}
+
+body
+{
+}
+
+#i_AllContent
+{
+    width: 100%;
+    height: 1280px;
+}
+
+#i_AllContent #r_CenterBar
+{
+    width: 100%;
+    height: auto;
+    margin-top: 70px;
+}
+
+#i_AllContent #r_CenterBar .bigDivArray
+{
+    margin-top: 0px;
+    width: 100%;
+    text-align: center;
+    height: 70px;
+    line-height: 50px;
+}
+
+#i_AllContent #r_CenterBar .bigDivArray .submitButton
+{
+    display: inline-block;
+    width: 380px;
+    height: 44px;
+    border: none;
+    border-radius: 3px;
+    line-height: 30px;
+    vertical-align: middle;
+    font-size: 15px;
+    text-indent: 20px;
+    box-shadow: 0 0 1px rgba(0,0,0,0.9);
+    background-color: #90c843;
+
+    font-size: 24px;
+    font-weight: 100;
+    color: white;
+    margin-top: 25px;
+}
+
+#i_AllContent #r_CenterBar .bigDivArray .bigInputArray
+{
+    display: inline-block;
+    width: 380px;
+    height: 32px;
+    border: 1px solid #aeb4a8;
+    border-radius: 3px;
+    line-height: 30px;
+    vertical-align: middle;
+    font-size: 15px;
+    text-indent: 20px;
+    box-shadow: 0 0 1px rgba(0,0,0,0.9);
+}
+
+#i_AllContent #r_CenterBar .bigDivArray .bigInputArray:focus
+{
+    box-shadow: 0px 0px 10px rgba(0,0,1,1.0);
+    border: 1px solid blue;
+}
+
+#i_AllContent #r_CenterBar #verifyDiv
+{
+    text-align: center !important;
+}
+#i_AllContent #r_CenterBar #verifyDiv span
+{
+    width: 0px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+#i_AllContent #r_CenterBar .bigDivArray #verifyInput
+{
+    width: 180px !important;
+    display: inline-block;
+    vertical-align: middle;
+}
+#i_AllContent #r_CenterBar #verifyDiv #verifyImage
+{
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+#i_AllContent #r_CenterBar #r_CenterRegisterBar
+{
+    width: 450px;
+    height: auto;
+    background-color: white;
+    margin: 0 auto;
+
+    box-shadow: 0px 0px 6px rgba(0,0,0,0.9);
+    border-radius: 3px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+/*显示错误信息*/
+#i_AllContent #r_CenterBar #r_CenterRegisterBar #errorPrompt
+{
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    padding-left: 40px;
+    color: red;
+    font-family: 黑体;
+}
+
+#i_AllContent #r_CenterBar #r_CenterRegisterBar #registerGuidDiv
+{
+    width: 100%;
+    height: 50px;
+
+    margin-bottom: 32px;
+}
+
+#i_AllContent #r_CenterBar #r_CenterRegisterBar #registerGuidDiv a
+{
+    display: inline-block;
+    float: left;
+    width: 150px;
+    height: 100%;
+    border: none;
+    margin: 0px;
+    cursor: pointer;
+}
+
+#regiterEmailButton
+{
+    background: url("../img/register/1.png") no-repeat center white;
+}
+#regiterPhoneButton
+{
+    background: url("../img/register/2.png") no-repeat center grey;
+}
+#regiterHelpButton
+{
+    background: url("../img/register/3.png") no-repeat center grey;
+}
+
+#i_AllContent #r_TopUserBar
+{
+    width: 100%;
+    background: url("../img/back/back8.png") repeat;
+    height: 50px;
+}
+
+#i_AllContent #r_TopUserBar #r_UserPrompt
+{
+    width: 800px;
+    height: 50px;
+    color: #fbf9ff;
+    border: none;
+    margin: 0 auto;
+    text-align: right;
+    font-size: 24px;
+    padding-right: 20px;
+    vertical-align: middle;
+}
+
+#i_AllContent #r_TopUserBar #r_UserPrompt span
+{
+    display: inline-block;
+    width: 0px;
+    height: 100%;
+    vertical-align: middle;
+    background-color: white;
+}
+
+#i_AllContent #r_TopUserBar #r_UserPrompt a
+{
+    width: 100px;
+    height: 40px;
+    border: none;
+    background-color: #009100;
+    vertical-align: middle;
+    display: inline-block;
+    margin-left: 40px;
+    font-size: 14px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+
+    box-shadow: 3px 1px 4px rgba(0,0,0,0.75);
+    border-bottom: 1px solid black;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.75);
+}
+
+#i_AllContent #r_TopUserBar #r_UserPrompt a:hover
+{
+    background-color: #00ca00;
+}
+
+/*隐藏的help页面*/
+#hiddenHelpPage
+{
+    width: 450px;
+    height: 530px;
     position: absolute;
     top: 0px;
     left: 0px;
-    width: 100%;
-}
-
-#iAllContent
-{
-    position: relative;
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-}
-
-#iLogoContent
-{
-    text-align: center;
-    width: 100%;
-    min-width: 600px;
-    height: 230px;
-    /*background-color: #00ee00;*/
-}
-
-#iLogoContent span
-{
-    margin: 0px;
-    height: 100%;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-#iLogoContent img
-{
-    height: 92px;
-    width: 250px;
-    vertical-align: middle;
-}
-
-#iCenterContent
-{
-    width: 100%;
-    /*background-color: red;*/
-    text-align: center;
-}
-
-#iCenterContentDiv
-{
-    width: 900px;
-    height: 700px;
-    background-color: #fff7fb;
-    margin: 0 auto;
-    border-radius: 10px;
-}
-
-#iCenterContentDiv #iHelpBox
-{
-    float: left;
-    width: 350px;
-    height: 680px;
-    margin: 7px;
-}
-
-#iCenterContentDiv #iHelpBox span
-{
-    display: inline-block;
-    width: 1px;
-    height: 100%;
-    vertical-align: middle;
-}
-
-#iCenterContentDiv #iHelpBox #iRightSplitString
-{
-    width: 1px;
-    height:90%;
-    background-color: #777777;
-    vertical-align: middle;
-    display: inline-block;
-    position: relative;
-    right: 10px;
-}
-
-#iCenterContentDiv #iRegisterBox
-{
-    float: left;
-    width: 520px;
-    height: 680px;
-    margin: 6px;
-}
-
-#iCenterContentDiv #iRegisterBox #iGuideBox
-{
-    width:100%;
-    height: 60px;
-    line-height: 60px;
-    text-align: left;
-    font-size: 38px;
-    font-family:黑体;
-    vertical-align: center;
-}
-
-#iCenterContentDiv #iRegisterBox #iGuideBox p
-{
-    margin: 0;
-    padding: 0px;
-}
-
-#iCenterContentDiv #iRegisterBox #iRegisterList
-{
-    width: 100%;
-    height:620px ;
-}
-
-#iCenterContentDiv #iRegisterBox #iRegisterList #iSplitString
-{
-    width: 90%;
-    height: 1px;
-    margin: 0px 2px ;
-    background-color: #777777;
-    border-radius: 90px;
-}
-
-#iCenterContentDiv #iRegisterBox #iRegisterList #iRegisterTables
-{
-    width: 520px;
-    height: 530px;
-    padding: 2px;
-}
-
-#iCenterContentDiv #iRegisterBox #iRegisterList #iRegisterTables #iRegisterTable
-{
-    font-family: 微软雅黑;
-    font-size: 14px;
-    margin: 0px;
-    padding: 0px;
-    border: 0px;
-}
-
-#iCenterContentDiv #iRegisterBox #iRegisterList #iRegisterTables #iRegisterTable th
-{
-    margin: 0px;
-    border: 0px;
-    padding: 0px;
-}
-
-#iCenterContentDiv #iRegisterBox #iRegisterList #iRegisterTables #iRegisterTable tr
-{
-    height: 100px;
-    text-align: left;
-    vertical-align: middle;
-}
-
-#iCenterContentDiv #iRegisterBox #iRegisterList #iRegisterTables #iRegisterTable tr .firstC
-{
-    text-align: right;
-}
-
-#iCenterContentDiv #iRegisterBox #iRegisterList #iRegisterTables #iRegisterTable tr .prompt
-{
-    width:250px ;
-}
-
-
-#iBottomContent
-{
-    width: 100%;
-    height: 100px;
-    /*background-color: black;*/
+    background-color: rgba(1,0,0,0.5);
+    display: none;
 }

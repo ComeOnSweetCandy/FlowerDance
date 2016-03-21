@@ -19,7 +19,11 @@ class RegisterController extends Controller
             $verifyRes = $this->verifyConfirm(I('post.table_confirm'));
             if(!$verifyRes)
             {
-                var_dump($verifyRes);
+                $errorData = array
+                (
+                    "user_verify"=>"您输入的验证码有误",
+                );
+                $this->ajaxReturn($errorData,"json");
                 return;
             }
 
@@ -40,10 +44,11 @@ class RegisterController extends Controller
                 $sendEmailContent = $sendEmailContent."<a href='http://localhost/index.php/Home/Register/confirmCode?id=".$getID."&code=".md5($email)."'>验证链接</a>";
                 MYSendMail($email,$sendEmailContent);
 
+                $this->success("注册成功,同时有一封验证邮件已经发往您的邮箱,请及时确认,稍后将为您跳转至登录页面","../Login/index",5);
             }
             else
             {
-                var_dump( $db->getError());
+                $this->ajaxReturn( $db->getError(),"json");
             }
         }
         else
@@ -107,13 +112,24 @@ class RegisterController extends Controller
 
     public function verify()
     {
-        $verify = new Verify();
+        $config = array
+        (
+            "useCurve"=>false,
+            "useNoise"=>false,
+            "bg"=>  array(1,1,1),
+            "imageH"=>40,
+            "imageW"=>200,
+            "length"=>4,
+            "fontSize"=>18,
+            "reset"=>false,
+        );
+
+        $verify = new Verify($config);
         $verify->entry(1);
     }
 
     public function verifyConfirm($code)
     {
-        var_dump($code);
         $id="1";
         $verify = new Verify();
         return $verify->check($code,$id);

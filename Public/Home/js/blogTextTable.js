@@ -244,6 +244,7 @@ function submitTalk(url)
 
         var newNode = waitCopyNode.cloneNode(true);
         newNode.style.display = "block";
+        newNode.setAttribute("class","talk_class");
         baseNode.appendChild(newNode);
         newNode.getElementsByClassName("talk_nameAndSaid")[0].innerHTML = document.getElementById("iUserName").innerHTML+":<span style='color: black'>"+talk_content+"</span>";
         newNode.getElementsByClassName("talk_timeAnd")[0].innerHTML = "刚刚";

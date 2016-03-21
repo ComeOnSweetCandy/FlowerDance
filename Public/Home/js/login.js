@@ -3,19 +3,19 @@ var rightBarWidth; //滚动条的宽度
 $(function()
 {
     //计算出右边滚动条的宽度
-    calculateRightBarWidth();
+    //calculateRightBarWidth();
 
-    changeAllContentPosition();
+    //changeAllContentPosition();
 
-    changeBodyWidth();
+    //changeBodyWidth();
 
-    changeBodyHeight();
+    //changeBodyHeight();
 
 });
 
 $(window).resize(function()
 {
-    changeAllContentPosition();
+    //changeAllContentPosition();
 });
 
 //改变右方方框的位置
@@ -23,13 +23,13 @@ function changeAllContentPosition()
 {
     //获取当前的屏幕高度 做出一些适配性
     //var clientScreenHeight = document.documentElement.clientHeight;
-    var clientScreenHeight = document.documentElement.clientHeight;
+    //var clientScreenHeight = document.documentElement.clientHeight;
     //获取右方方框的高度
-    var boxHeight = $('#iAllContent').css('height');
+    //var boxHeight = $('#iAllContent').css('height');
     //计算方框应该被放置的margin-top值
-    var marginTopVal = (clientScreenHeight - parseInt(boxHeight))/2;
+    //var marginTopVal = (clientScreenHeight - parseInt(boxHeight))/2;
     //赋值给方框
-    $('#iAllContent').css('margin-top',marginTopVal);
+    //$('#iAllContent').css('margin-top',marginTopVal);
 }
 
 //修改body宽度和页面高度
@@ -37,45 +37,40 @@ function changeBodyWidth()
 {
     //获取当前的屏幕宽度 做出一些body适配
     //var clientScreenWidth =  document.documentElement.clientWidth;
-    var clientScreenWidth = window.screen.width;
-    $('body').css('width', clientScreenWidth-rightBarWidth);
+    //var clientScreenWidth = window.screen.width;
+    //$('body').css('width', clientScreenWidth-rightBarWidth);
 
     //初始化时 底层背景图片的宽度等于整个屏幕的宽度
-    $('#backgroundImg').css('width', clientScreenWidth-rightBarWidth);
+    //$('#backgroundImg').css('width', clientScreenWidth-rightBarWidth);
 }
 
 //修改body高度和页面高度
 function changeBodyHeight()
 {
-    var clientScreenHeight = window.screen.availHeight;
-    if(clientScreenHeight<630)
-    {
-        clientScreenHeight=630;
-    }
-    $('body').css('height', clientScreenHeight);
-    $('html').css('height', clientScreenHeight);
-    $('#footer').css('top',clientScreenHeight-30);
+    //var clientScreenHeight = window.screen.availHeight;
+    //if(clientScreenHeight<630)
+    //{
+    //    clientScreenHeight=630;
+    //}
+    //$('body').css('height', clientScreenHeight);
+    //$('html').css('height', clientScreenHeight);
+    //$('#footer').css('top',clientScreenHeight-30);
 }
 
 function calculateRightBarWidth()
 {
     //获取滚动条的宽度 是的
-    var innerWidth = document.body.clientWidth;
-    var outWidth;
-    if(window.innerWidth)
-    {
-        outWidth = window.innerWidth;
-    }
-    else
-    {
-        outWidth = $('html').css('width');
-    }
-    rightBarWidth = parseInt(outWidth)-parseInt(innerWidth);
-}
-
-document.ready = function()
-{
-
+    //var innerWidth = document.body.clientWidth;
+    //var outWidth;
+    //if(window.innerWidth)
+    //{
+    //    outWidth = window.innerWidth;
+    //}
+    //else
+    //{
+    //    outWidth = $('html').css('width');
+    //}
+    //rightBarWidth = parseInt(outWidth)-parseInt(innerWidth);
 }
 
 window.onload = function ()
@@ -96,7 +91,6 @@ window.onload = function ()
         var data = data + "password=" + document.getElementById("idUserPassword").value;
 
         var newUrl = document.getElementById("idLoginButton").getAttribute("name");
-        console.log(newUrl);
         MYAjaxSubmit(newUrl,2,data,function(str)
         {
             //通过最下方的 提示条来进行提示 登录的结果
@@ -125,6 +119,16 @@ window.onload = function ()
     //当密码框和邮箱框获取焦点时
     document.getElementById("idUserEmail").onfocus = function(){disapperErrorDiv()};
     document.getElementById("idUserPassword").onfocus = function(){disapperErrorDiv()};
+
+    var currentImg = 1;
+    var inter = window.setInterval(function(){switchBackImg((currentImg++)%4)},4000);
+
+
+}
+
+function testR()
+{
+    alert("fe");
 }
 
 function disapperErrorDiv()
@@ -132,3 +136,16 @@ function disapperErrorDiv()
     $('#idTopRedOrGreen').fadeOut(0);
 }
 
+function switchBackImg(task)
+{
+    var currentImg = document.getElementById("hidden_CurImg").innerHTML;
+    currentImg = parseInt(currentImg);
+    task = parseInt(task);
+
+    document.getElementsByClassName("imgWall")[currentImg].style.zIndex=0
+    document.getElementsByClassName("imgWall")[task].style.zIndex=1;
+    document.getElementById("hidden_CurImg").innerHTML = task;
+
+    document.getElementsByClassName("switchBackImgButton")[currentImg].style.color="white";
+    document.getElementsByClassName("switchBackImgButton")[task].style.color="red";
+}

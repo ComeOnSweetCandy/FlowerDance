@@ -4,17 +4,26 @@ html,body
     padding:0px;
     height:auto;
     width: 100%;
-    height: 2000px;
-    background-color: black;
+
     /*
     background: url("../img/background.jpg") no-repeat black;
     background-size : 100%;
     */
 }
 
+html
+{
+    background: url("../img/mainPageBackground.png") repeat-x rgb(147,197,234);
+}
+
+body
+{
+    height: 1280px;
+    position: relative;
+}
+
 #idTopRedOrGreen
 {
-    background-color: red ;
     color: white ;
     position: fixed ;
     bottom: 0px;
@@ -31,6 +40,25 @@ html,body
     font-size: 18px;
 }
 
+#iBottomMessage
+{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 100px;
+}
+
+#iBottomMessage #iCenterC
+{
+    width: 800px;
+    margin: 0 auto;
+    height: 100%;
+    background-color: #1e1e1e;
+    text-align: center;
+    line-height: 100px;
+    color: white;
+}
+
 #backgroundImg
 {
     position: absolute;
@@ -39,16 +67,91 @@ html,body
     width: 100%;
 }
 
-#iAllContent
+#iTureAllContent
 {
-    position: relative;
+    width: 850px;
+    height: auto;
+    margin: 100px auto;
+}
+
+#iTureAllContent #iAllContent
+{
     width: 250px;
     height:350px;
-    background-color:rgba(30,30,30,0.3);
-    float: right;
-    margin-top: 189px;
-    margin-right: 6%;
-    border-radius: 10px;
+    background-color:rgba(30,30,30,1.0);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    display: inline-block;
+    float: left;
+}
+
+#iTureAllContent #iLeftAllContent
+{
+    width: 600px;
+    height: 350px;
+    background-color: black;
+    display: inline-block;
+    float: left;
+    position: relative;
+
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+
+
+#iTureAllContent #iLeftAllContent .imgWall
+{
+    width: 600px;
+    height: 350px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+#iTureAllContent #iLeftAllContent #imgWall1
+{
+    background: url("../img/test/1.jpg") no-repeat;
+    z-index: 1;
+
+}
+#iTureAllContent #iLeftAllContent #imgWall2
+{
+    background: url("../img/test/2.jpg") no-repeat;
+
+}
+#iTureAllContent #iLeftAllContent #imgWall3
+{
+    background: url("../img/test/3.jpg") no-repeat;
+
+}
+#iTureAllContent #iLeftAllContent #imgWall4
+{
+    background: url("../img/test/4.jpg") no-repeat;
+
+}
+
+#iTureAllContent #iLeftAllContent #floatButtonContent
+{
+    display: inline-block;
+
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    letter-spacing: 4px;
+
+
+    z-index: 999;
+}
+
+#iTureAllContent #iLeftAllContent #floatButtonContent a
+{
+    text-decoration: none;
 }
 
 #header
@@ -56,7 +159,16 @@ html,body
     width: 250px;
     height: 92px;
     margin: 20px auto;
-    background: url("../img/panda_blog.png") no-repeat;
+
+    text-align: center;
+    line-height: 92px;
+    font-size: 50px;
+    color: #ddffc5;
+}
+
+#header span
+{
+
 }
 
 #iEnterContent
@@ -87,19 +199,31 @@ p
     margin: 7px;
     border-radius: 2px;
     font-family: 微软雅黑;
+    border: 1px solid black;
+    text-indent: 20px;
 }
 
-#inputButtonDiv input
+#inputButtonDiv .regitsteAndLoginButton
 {
     width: 100px;
     height: 40px;
     line-height: 32px;
     font-size:22px;
-    margin: 7px;
     margin-top: 14px;
+    margin-left: 13px;
     border-radius: 1px;
     text-decoration: none;
     font-family:微软雅黑;
+
+    float: left;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+
+    background-color: #00ee00;
+    line-height: 40px;
+    box-shadow: 0 0 3px rgba(0,255,0,0.9);
 }
 
 #iSpecialContent a
