@@ -24,7 +24,7 @@ class SubmitTalkModel extends Model
         (
             "article_id"=>$articleId,
         );
-        return $this->where($data)->limit($f,$c)->select();
+        return $this->where($data)->limit($f,$c)->order("talk_id desc")->select();
     }
 
     public function getTalkCount($articleId)

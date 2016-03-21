@@ -43,4 +43,26 @@ class RegisterModel extends Model
             return false;
         }
     }
+
+    public function getSign($userId)
+    {
+        $data = array
+        (
+            "user_id"=>$userId,
+        );
+        return $this->where($data)->field("user_sign")->select();
+    }
+
+    public function changeSign($userId,$signContent)
+    {
+        $data = array
+        (
+            "user_id"=>$userId,
+        );
+        $data2 = array
+        (
+            "user_sign"=>$signContent,
+        );
+        return $this->where($data)->save($data2);
+    }
 }

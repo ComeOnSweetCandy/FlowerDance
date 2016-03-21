@@ -160,7 +160,9 @@ function showTalkBigBar(task)
         //最一些清理工作
         var baseNode = document.getElementById("btt_EveryoneTalkContent");
         var nodeList = baseNode.getElementsByClassName("talk_class");
-        var length =nodeList.length;
+
+        //翻页器none
+        document.getElementById("btt_PageContent").style.display="none";
 
         for(var i in nodeList)
         {
@@ -245,9 +247,14 @@ function submitTalk(url)
         var newNode = waitCopyNode.cloneNode(true);
         newNode.style.display = "block";
         newNode.setAttribute("class","talk_class");
-        baseNode.appendChild(newNode);
+        beforeNode = document.getElementById("talk_class_copy");
+        baseNode.insertBefore(newNode,beforeNode);  //插入第一个元素之前
+
         newNode.getElementsByClassName("talk_nameAndSaid")[0].innerHTML = document.getElementById("iUserName").innerHTML+":<span style='color: black'>"+talk_content+"</span>";
         newNode.getElementsByClassName("talk_timeAnd")[0].innerHTML = "刚刚";
+
+        //删除评论框中的内容
+        talk_content = document.getElementById("btt_InputTalkArea").value="";
     });
 }
 

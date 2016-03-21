@@ -27,7 +27,7 @@ function submitYourBlog()
                 window.location.reload(true);
             }
 
-            var beforeNode = document.getElementById("submitBlogDiv");
+            var beforeNode = document.getElementById("smp_SeeModel");
             var newNode = oldNode.cloneNode(true);
             var name = document.getElementById("iUserName").innerHTML;
             var number = str.split("\"")[1];

@@ -1,6 +1,7 @@
 <?php
 namespace Home\Controller;
 use Home\Model\ChangeImageModel;
+use Home\Model\RegisterModel;
 use Think\Controller;
 use Think\Uploads;
 use Think\Upload;
@@ -42,5 +43,24 @@ class SettingController extends Controller
                 echo "<script>parent.returnImgUrl('".$savePath."');</script>";
             }
         }
+    }
+
+    public function changeSign()
+    {
+        $new_Sign = I("post.newSign");
+        $user_id = session("id");
+        $userDb = new RegisterModel("user");
+        var_dump($user_id);
+        var_dump($new_Sign);
+        $res = $userDb->changeSign($user_id,$new_Sign);
+        return $res;
+    }
+
+    public function resetSign()
+    {
+        $user_id = session("id");
+        $userDb = new RegisterModel("user");
+        $res = $userDb->getSign($user_id);
+        $this->ajaxReturn($res);
     }
 }

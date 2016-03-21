@@ -35,7 +35,7 @@
             <a onclick="" href="<?php echo U('CarepersonList/displayCarePage');?>"><img src="/Public/Home/img/icon/view.png"></a>
             <a onclick="" href="<?php echo U('CarepersonList/displayListenPage');?>"><img src="/Public/Home/img/icon/listener.png"></a>
             <a onclick="" href="<?php echo U('Login/index');?>"><img src="/Public/Home/img/icon/exit.png"></a>
-            <a onclick="alert('该按钮功能暂时未开放')" ><img src="/Public/Home/img/icon/setting.png"></a>
+            <a onclick="" href="<?php echo U('Setting/displaySettingPage');?>" ><img src="/Public/Home/img/icon/setting.png"></a>
             <div id="iSearchDiv">
                 <span></span>
                 <input id="iSearchInput" placeholder="微博用户名/微博ID">
