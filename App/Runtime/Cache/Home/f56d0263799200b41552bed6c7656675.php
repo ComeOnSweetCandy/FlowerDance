@@ -41,7 +41,7 @@
             <div id="verifyDiv" class="bigDivArray">
                 <span></span>
                 <input maxlength="4" id="verifyInput" class="bigInputArray" placeholder="输入验证码" value="" type="text">
-                <img id="verifyImage" src="<?php echo U('verify');?>" onclick="changeVerify()">
+                <img id="verifyImage" src="<?php echo U('Register/verify');?>" onclick="changeVerify()">
             </div>
             <div class="bigDivArray">
                 <input class="submitButton" value="注册提交" type="button" onclick="submitButtonClick()">
