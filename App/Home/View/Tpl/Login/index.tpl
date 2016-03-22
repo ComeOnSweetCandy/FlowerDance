@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="Name.manifest">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>

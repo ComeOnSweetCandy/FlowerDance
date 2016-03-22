@@ -1,5 +1,5 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
-<html lang="en">
+<html lang="en" manifest="Name.manifest">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>

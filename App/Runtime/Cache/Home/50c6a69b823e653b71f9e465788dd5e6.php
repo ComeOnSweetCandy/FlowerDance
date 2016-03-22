@@ -42,6 +42,8 @@
             <!--发布个人微博的输入框-->
 <link rel="stylesheet" href="/Public/Home/css/submitBlogBar.css">
 <script type="text/javascript" language="javascript" src="/Public/Home/js/submitBlog.js"></script>
+<link rel="stylesheet" href="/Public/Home/css/giflib.css">
+<script type="text/javascript" language="javascript" src="/Public/Home/js/giflib.js"></script>
 
 <div id="submitBlogDiv">
     <div id="iSubmitContentFirstLine">你想说些什么吗:</div>
@@ -49,6 +51,7 @@
         <textarea id="iSpeakContent" maxlength="255" placeholder=""></textarea>
     </div>
     <div id="iSubmitContentThirdLine">
+        <a id="giflib_showGifButton" class="/Public/Home/img/gif/" onclick="touchShowGifButton()" style="background: url('/Public/Home/img/gif/smil.png')"></a>
         <input id="iSubmitBlogButton" type="button" value="发布" onclick="submitYourBlog()"  />
     </div>
 </div>
