@@ -18,6 +18,7 @@ class SubmitBlogModel extends Model
             "user_id"=>session("id"),
             "article_agree"=>0,
             "article_talk"=>0,
+            "article_collection"=>0,
             "article_time"=>date("Y-m-d H:i:s",$t),
         );
 
