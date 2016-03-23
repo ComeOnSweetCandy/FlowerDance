@@ -54,7 +54,7 @@ class OtherPersonPageController extends Controller
         //这里将需要的数据装入数组之中
         $pageInfo = array
         (
-            "pageModel"=>2,  //2为他人主页 1为本人主页
+            "pageMode"=>2,  //2为他人主页 1为本人主页
             "isCare"=>$isCare //是否已经关注过该人
         );
         $yourInfo = array

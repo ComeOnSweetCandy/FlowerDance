@@ -66,7 +66,7 @@
 <script type="text/javascript" language="javascript" src="/Public/Home/js/blogTextTable.js"></script>
 
 <?php if(is_array($user_blogs)): foreach($user_blogs as $key=>$blog): ?><div id="iBlogTextTableDiv" name = "article_id_<?php echo ($blog["article_id"]); ?>">
-    <?php if($pageInfo["pageModel"] == 1): ?><div id="iDeleteButton"><a id="iDeleteBlogButton" onclick="deleteBlogFunction(this.parentNode.parentNode)" style="cursor: pointer">删除</a></div><?php endif; ?>
+    <?php if($pageInfo["pageMode"] == 1): ?><div id="iDeleteButton"><a id="iDeleteBlogButton" onclick="deleteBlogFunction(this.parentNode.parentNode)" style="cursor: pointer">删除</a></div><?php endif; ?>
     <div id="iTopTableDiv">
         <div id="iImageDiv"><img src="/Public/Home/uploads/<?php echo ($userInfo["user_img"]); ?>"></div>
         <div id="iNameContentTimeDiv">

@@ -5,7 +5,7 @@
 <foreach name="user_blogs" item="blog">
 
 <div id="iBlogTextTableDiv" name = "article_id_{$blog.article_id}">
-    <if condition = "$pageInfo.pageModel eq 1">
+    <if condition = "$pageInfo.pageMode eq 1">
         <div id="iDeleteButton"><a id="iDeleteBlogButton" onclick="deleteBlogFunction(this.parentNode.parentNode)" style="cursor: pointer">删除</a></div>
     </if>
     <div id="iTopTableDiv">

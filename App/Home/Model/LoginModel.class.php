@@ -56,4 +56,14 @@ class LoginModel extends Model
         );
         return $this->where($data)->find();
     }
+
+    public function addAccess($ip,$time)
+    {
+        $data = array
+        (
+            "access_ip"=>$ip,
+            "access_time"=>$time,
+        );
+        $this->add($data);
+    }
 }

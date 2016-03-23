@@ -8,6 +8,12 @@ class LoginController extends Controller
     public function index()
     {
         $this->display();
+
+        //记录访问
+        $ip = get_client_ip(0);
+        $time = time();
+        $loginDb = new LoginModel("access");
+        $loginDb->addAccess($ip,$time);
     }
 
     public function confirmLoginAction()
