@@ -9,7 +9,7 @@
         <div id="iDeleteButton"><a id="iDeleteBlogButton" onclick="deleteBlogFunction(this.parentNode.parentNode)" style="cursor: pointer">删除</a></div>
     </if>
     <div id="iTopTableDiv">
-        <div id="iImageDiv"><img src="__IMG__/icon/agree.jpg"></div>
+        <div id="iImageDiv"><img src="__UPLOAD__/{$userInfo.user_img}"></div>
         <div id="iNameContentTimeDiv">
             <div id="iNameDiv"  class="cText">
                 <strong>
@@ -20,7 +20,8 @@
                     </if>
                 </strong>
             </div>
-            <div id="iBlogContentDiv" class="cText">{$blog.article_content}</div>
+            <input id="btt_GifBagUrl" type="button" style="display: none;" value="__IMG__/gif/">
+            <div id="iBlogContentDiv" class="cText cTextContent">{$blog.article_content}</div>
             <div id="iTimeDiv" class="cText">{$blog.article_time}</div>
         </div>
         <!--<div id="iFloatRightButton">test</div>-->

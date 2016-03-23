@@ -1,12 +1,3 @@
-window.onload = function()
-{
-    document.getElementsByClassName("iDeleteBlogButton").onclick = function()
-    {
-        alert("ufe");
-        console.log("this is a test :\n ");
-        console.log(this.parent);
-    }
-}
 
 function deleteBlogFunction(task)
 {

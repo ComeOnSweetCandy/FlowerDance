@@ -68,7 +68,7 @@
 <?php if(is_array($user_blogs)): foreach($user_blogs as $key=>$blog): ?><div id="iBlogTextTableDiv" name = "article_id_<?php echo ($blog["article_id"]); ?>">
     <?php if($pageInfo["pageModel"] == 1): ?><div id="iDeleteButton"><a id="iDeleteBlogButton" onclick="deleteBlogFunction(this.parentNode.parentNode)" style="cursor: pointer">删除</a></div><?php endif; ?>
     <div id="iTopTableDiv">
-        <div id="iImageDiv"><img src="/Public/Home/img/icon/agree.jpg"></div>
+        <div id="iImageDiv"><img src="/Public/Home/uploads/<?php echo ($userInfo["user_img"]); ?>"></div>
         <div id="iNameContentTimeDiv">
             <div id="iNameDiv"  class="cText">
                 <strong>
@@ -77,7 +77,8 @@
                         <?php echo ($blog["user_name"]); endif; ?>
                 </strong>
             </div>
-            <div id="iBlogContentDiv" class="cText"><?php echo ($blog["article_content"]); ?></div>
+            <input id="btt_GifBagUrl" type="button" style="display: none;" value="/Public/Home/img/gif/">
+            <div id="iBlogContentDiv" class="cText cTextContent"><?php echo ($blog["article_content"]); ?></div>
             <div id="iTimeDiv" class="cText"><?php echo ($blog["article_time"]); ?></div>
         </div>
         <!--<div id="iFloatRightButton">test</div>-->
@@ -162,8 +163,6 @@
         var blogsCount = baseNode.getElementsByTagName("span")[1].innerHTML;
         var url =  baseNode.getElementsByTagName("span")[2].innerHTML;
         var sendString = "firstBlog="+firstBlog+"&blogsCount="+blogsCount+"&pageMode="+pageMode;
-        console.log(sendString);
-
         document.getElementById("lm_LoadMoreDiv").innerHTML="加载中......";
 
         MYAjaxSubmit(url,2,sendString,function(str)

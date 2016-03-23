@@ -1,12 +1,3 @@
-window.onload = function()
-{
-
-
-    document.getElementById("inputSubmitBlogButton").onclick = function()
-    {
-
-    };
-}
 
 function submitYourBlog()
 {

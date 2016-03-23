@@ -33,8 +33,6 @@
         var blogsCount = baseNode.getElementsByTagName("span")[1].innerHTML;
         var url =  baseNode.getElementsByTagName("span")[2].innerHTML;
         var sendString = "firstBlog="+firstBlog+"&blogsCount="+blogsCount+"&pageMode="+pageMode;
-        console.log(sendString);
-
         document.getElementById("lm_LoadMoreDiv").innerHTML="加载中......";
 
         MYAjaxSubmit(url,2,sendString,function(str)
