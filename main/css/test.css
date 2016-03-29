@@ -1,6 +1,6 @@
 body
 {
-    height: 2000px !important;
+
 }
 
 /*2*/
@@ -131,4 +131,85 @@ body
     -ms-transform: scale(1.2);
     -o-transform: scale(1.2);
     transform: scale(1.2);
+}
+
+
+/*6 paraffla*/
+.paraffla
+{
+    padding: 25% 0px 25% 0px !important;
+    width: 100%;
+    margin-top: 100px;
+    position: relative;
+
+    background-image: url("../img/img.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.paraffla img
+{
+
+}
+.paraffla .disButton
+{
+    background-color: #00ee00 !important;
+    color: white;!important;
+    border-radius: 0px !important;
+    border:none;
+    display: inline-block;
+    z-index: 1;
+
+    -webkit-transition: background-color 0.5s,color 0.5s;
+    -moz-transition: background-color 0.5s,color 0.5s;
+    -ms-transition: background-color 0.5s,color 0.5s;
+    -o-transition: background-color 0.5s,color 0.5s;
+    transition: background-color 0.5s,color 0.5s;
+}
+.paraffla button:hover
+{
+    background-color: #0b4f00 !important;
+    color: #ee7782 !important;
+    cursor: pointer !important;
+}
+.paraffleOffset
+{
+    margin-left: 20%;
+}
+
+/*7 picShow*/
+.picShow
+{
+    margin-top: 100px;
+}
+.picShow .col-xs-1
+{
+    text-align: center;
+}
+.picShow .col-xs-10 .row div
+{
+    border:none;
+    position: relative;
+}
+.picShow .col-xs-10 .row div img
+{
+    width: 100%;
+    position: relative;
+}
+.picShow .col-xs-10 .row div .hiddenInfo
+{
+    position: absolute;
+    width: 200px;
+    height:0px;
+    bottom:0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0,0,0,0.5) !important;
+
+    transition: all 0.4s;
+}
+.picShow .col-xs-10 .row div:hover .hiddenInfo
+{
+    height: 40px;
 }
