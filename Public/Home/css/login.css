@@ -131,6 +131,24 @@ body
     background: url("../img/test/4.jpg") no-repeat;
 
 }
+#iTureAllContent #iLeftAllContent #imgWall5
+{
+    height: 350px;
+    position: absolute;
+    top:0px;
+    left: 0px;
+    width: 20px;
+    z-index: 1000;
+}
+#iTureAllContent #iLeftAllContent #imgWall6
+{
+    height: 350px;
+    position: absolute;
+    top:0px;
+    right: 0px !important;
+    width: 20px;
+    z-index: 1000;
+}
 
 #iTureAllContent #iLeftAllContent #floatButtonContent
 {

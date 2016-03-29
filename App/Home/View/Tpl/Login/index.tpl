@@ -28,11 +28,13 @@
 </div>
 
 <div id="iTureAllContent">
-    <div id="iLeftAllContent">
+    <div id="iLeftAllContent" style="overflow: hidden">
         <div class="imgWall" id="imgWall1"></div>
         <div class="imgWall" id="imgWall2"></div>
         <div class="imgWall" id="imgWall3"></div>
         <div class="imgWall" id="imgWall4"></div>
+        <div class="" id="imgWall5"></div>
+        <div class="" id="imgWall6"></div>
         <div id="hidden_CurImg" style="display: none">0</div>
         <div id="floatButtonContent">
             <a class="switchBackImgButton" href="javascript::void(0)" onclick="switchBackImg(0)" style="color: red;">0</a>

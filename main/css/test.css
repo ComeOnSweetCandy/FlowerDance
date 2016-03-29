@@ -1,0 +1,134 @@
+body
+{
+    height: 2000px !important;
+}
+
+/*2*/
+
+.navbar-nav #textButton *
+{
+    background-color: black !important;
+    color: white !important;
+    right:0px !important;
+}
+
+
+.floatNavbar
+{
+    margin-bottom: 0px !important;
+}
+.floatNavbar .navbar-nav li a
+{
+    font-weight: bold;
+    margin-left: -1px;
+}
+.floatNavbar.affix
+{
+    top:0;
+    width: 100%;
+    z-index: 10;
+}
+@media (min-width: 768px)
+{
+    .floatNavbar .col-sm-12
+    {
+        padding-left: 70px;
+        padding-right: 70px;
+        box-shadow: 0 0 5px rgba(0,0,255,0.7);
+    }
+    .floatNavbar .navbar-nav li a
+    {
+        line-height: 50px;
+        border-left: 1px solid #d9d9d9;
+        border-right: 1px solid #d9d9d9;
+    }
+    .floatNavbar .glyphicon-search
+    {
+        line-height: 80px;
+        cursor: pointer;
+        padding: 0px 25px 0px 25px;
+        border-left: 1px solid #d9d9d9;
+        border-right: 1px solid #d9d9d9;
+        position: relative;
+        z-index: 2;
+    }
+    .floatNavbar .searchContentBar
+    {
+        border: 0px;
+        height: 80px;
+        vertical-align: middle;
+        font-size: 30px;
+        font-weight: bold;
+        position: absolute;
+        border: none;
+        width: 70%;
+        background-color: #f8f8f8;
+        z-index: 1;
+        outline: none;
+    }
+    .floatNavbar .searchContentBar:focus
+    {
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+/*1 logoBar*/
+.logoBar
+{
+    height: 170px;
+    margin-bottom: 10px;
+}
+.logoBar span
+{
+    width: 0;
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.logoBar .log
+{
+    display: inline-block;
+    vertical-align: middle;
+    float: left;
+}
+
+/*3 picList*/
+.picList
+{
+   background-color:#f6f6f6;
+    padding: 0px !important;
+}
+
+/*4 methodList*/
+.methodList
+{
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+.methodList .col-sm-4
+{
+    border-left: 1px solid #a7a7a7;
+    border-right: 1px solid #a7a7a7;
+    margin-left: -1px;
+}
+
+/*5 freeList*/
+.freeList .col-sm-4
+{
+    overflow: hidden;
+    padding: 0px !important;
+    border: 10px solid white;
+}
+.freeList .col-sm-4 img
+{
+    transition: transform 0.5s;
+}
+.freeList .col-sm-4 img:hover
+{
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}

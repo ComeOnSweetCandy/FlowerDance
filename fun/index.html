@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大杂烩</title>
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="jquery/jquery-1.12.2.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+
+    <style>
+		body
+		{
+			background:url("back.png") repeat-x rgb(147,197,234);
+		}
+		.blackTheme
+		{
+			background-color:#222222 !important;
+		}
+
+        #scrollSpyNav
+        {
+            width: 110px;
+            border: 1px solid #6479a8;
+            border-bottom: none;
+            box-shadow: 0px 0px 5px rgba(0,0,155,1.0);
+        }
+        #scrollSpyNav li
+        {
+            border-bottom: 1px solid #6479a8;
+            margin: 0px;
+            border-radius: 0px;
+            text-align: center;
+        }
+        #scrollSpyNav li.active a
+        {
+            border-radius: 0px;
+        }
+        #scrollSpyNav.affix
+        {
+            top:0px;
+        }
+    </style>
+
+</head>
+<body data-spy="scroll" data-target="#myScrollspy">
+
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand">微博前端</a>
+            <span class="navbar-toggle" data-toggle="collapse" data-target="#collapse_list">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </span>
+        </div>
+        <div class="collapse navbar-collapse navbar-right" id="collapse_list">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">顶端</a></li>
+                <li class=""><a href="#">目录开始</a></li>
+                <li class=""><a href="#">正文</a></li>
+                <li class="dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle">更多<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">关于</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">版本</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div>
+            <form class="navbar-form navbar-right navbar-right">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="需要搜索的内容">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-primary">GO</button>
+                        <button type="button" class="btn btn-primary" data-toggle="dropdown"><span class="caret"></span></button>
+                        <ul class="dropdown-menu pull-right" id="#searchMothodList">
+                            <li><a>搜索方式</a></li>
+                            <li class="divider"></li>
+                            <li class="active searchMothod"><a href="#">模糊搜索</a></li>
+                            <li class="searchMothod"><a href="#">精确搜索</a></li>
+                        </ul>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+	<div class="panel panel-primary">
+		<div class="panel-heading blackTheme">
+			<h3 class="panel-title">
+				所应用到的内容汇总
+			</h3>
+		</div>
+		<div class=panel-body">
+			<table class="table table-striped table-hover">
+				<thead>
+				<tr>
+					<th class="col-lg-3">使用内容</th><th class="col-lg-3">使用描述</th><th class="col-lg-6">使用方法</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>面板</td><td>DOM组件可以插入到盒子中，例如列表</td><td>span class="glyphicon glyphicon-search"></td>
+				</tr>
+				<tr>
+					<td>字体图标</td><td>用于显示图标用于显示图标用于显示图标用于显示图标</td><td>span class="glyphicon glyphicon-search"></td>
+				</tr>
+				<tr>
+					<td>字体图标</td><td>用于显示图标</td><td>span class="glyphicon glyphicon-search"></td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-2 hidden-xs" id="myScrollspy">
+            <ul id="scrollSpyNav" class="nav nav-pills nav-stacked"  data-spy="affix" data-offset-top="320">
+                <li class="active"><a href="#section1">面板</a></li>
+                <li><a href="#section2">折叠栏目</a></li>
+				<li><a href="#section3">按钮/按钮组</a></li>
+                <li><a href="#section4">输入框/输入框组</a></li>
+				<li><a href="#section5">模态框/表单</a></li>
+                <li><a href="#section6">提示框</a></li>
+				<li><a href="#section7">导航元素/切换卡</a></li>
+                <li><a href="#section8">警告框</a></li>
+				<li><a href="#section9">图片轮播</a></li>
+            </ul>
+        </div>
+        <div class="col-sm-10">
+		
+		<!--1面板-->
+			<div class="panel panel-primary"  id="section1">
+				<div class="panel-heading blackTheme">
+					<span class="close">&times</span>
+					<h3 class="panel-title">
+						<a data-toggle="collapse" href="#collapse1">面板</a>
+					</h3>
+				</div>
+				<div id="collapse1" class="panel-collapse collapse in">
+					<div class="panel-body">
+						<p>包裹这段内容的就是面板。</p>
+						<p>首先，面板的使用为DIV添加panel panel-primary等类，然后分panel-heading【panel-title】panel-body等部分。</p>
+
+                        <!--BEGIN 示例区域-->
+                        <div class="panel panel-primary" style="width: 40%">
+                            <div class="panel-heading">
+                                <div class="panel-title">测试面板</div>
+                            </div>
+                            <div class="panel-body">这里是面板主内容</div>
+                        </div>
+                        <!--END 示例区域-->
+					</div>
+				</div>
+			</div>
+        <!--1面板-->
+
+		<!--2折叠栏-->
+			<div class="panel panel-primary" id="section2">
+				<div class="panel-heading blackTheme">
+                    <span class="close">&times</span>
+					<h3 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse2">折叠栏目</a>
+					</h3>
+				</div>
+                <div id="collapse2" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <p>上述有面板的使用方法和效果，只需要在面板的panel-body外层加入一层div并且类设置为panel-collapse collapse，在panel-title中加入一个控制就可以了</p>
+
+                        <!--BEGIN 示例区域-->
+                        <div class="panel panel-primary" style="width: 40%">
+                            <div class="panel-heading">
+                                <div class="panel-title">
+                                    <a data-toggle="collapse" href="#section2collapse">点击这段内容可以实现折叠打开</a>
+                                </div>
+                            </div>
+                            <div class="collapse panel-collapse fade in" id="section2collapse">
+                                <div class="panel-body">可以让面板collapse部分添加fade in类，以实现淡入淡出效果，并且按钮可以使用href而不是data-target，这样在hover的时候鼠标有效果</div>
+                            </div>
+                        </div>
+                        <!--END 示例区域-->
+                    </div>
+                </div>
+			</div>
+            <!--2折叠栏-->
+
+            <!--3按钮-->
+            <div class="panel panel-primary"  id="section3">
+                <div class="panel-heading blackTheme">
+                    <span class="close">&times</span>
+                    <h3 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse3">按钮/按钮组</a>
+                    </h3>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <p>一个由bootstrap定义外形的button</p>
+
+                        <!--BEGIN 示例区域-->
+                        <button type="button" class="btn btn-primary">这只是一个非常普通的按钮</button>
+                        <div class="btn-group">
+                            <button class="btn btn-primary">这里</button>
+                            <button class="btn btn-primary active">是一个</button>
+                            <button class="btn btn-primary">按钮组</button>
+                        </div>
+                        <div class=""></div>
+                        <!--END 示例区域-->
+                    </div>
+                </div>
+            </div>
+            <!--3模态框-->
+
+            <!--4输入框-->
+            <div class="panel panel-primary"  id="section4">
+                <div class="panel-heading blackTheme">
+                    <span class="close">&times</span>
+                    <h3 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse4">输入框/输入框组</a>
+                    </h3>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <p>一个由bootstrap定义外形的input</p>
+                        <p>input-gounp / input-group-btn / input-group-addon</p>
+
+                        <!--BEGIN 示例区域-->
+                        <div class="input-group" style="width: 40% ; float: left">
+                            <input type="text" class="form-control" placeholder="这是一个输入框和按钮的输入组">
+                            <div class="input-group-btn">
+                                <button type="button" class="btn btn-primary">点击</button>
+                            </div>
+                        </div>
+
+                        <div class="input-group" style="width: 40%;float: left;margin-left: 30px">
+                            <span class="input-group-addon">提示</span>
+                            <input type="text" class="form-control" placeholder="这是一个输入框和文字addon的输入组">
+                        </div>
+                        <!--END 示例区域-->
+                    </div>
+                </div>
+            </div>
+            <!--4输入框组-->
+
+            <!--5模态框-->
+            <div class="panel panel-primary"  id="section5">
+                <div class="panel-heading blackTheme">
+                    <span class="close">&times</span>
+                    <h3 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse5">模态框/表单</a>
+                    </h3>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <p>模态框，就像一个遮罩层，可以遮挡住下层所有的内容，上层显示一个交互区域。</p>
+                        <p>首先，需要给一个最外层modal类，二层一个dialog弹出类,三层一个content(不加content没有背景)</p>
+                        <p>在表单中，label必须加入类control-label否则不受表单控制，无法与表单内容对其</p>
+                        <!--BEGIN 示例区域-->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#section5modal1">这是一个可以调出模态框的按钮</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#section5modal2">这是一个可以调出输入框组的按钮</button>
+
+                        <div class="modal fade" id="section5modal1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <span class="close" data-dismiss="modal">&times;</span>
+                                        <h4>这里是一个模态框</h4>
+                                    </div>
+                                    <div class="modal-body">这里是正文内容 body部分</div>
+                                    <div class="modal-footer">
+                                        这里是尾部 自动右对齐
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="modal fade" id="section5modal2">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header blackTheme" style="color: white;">
+                                        <span class="close" data-dismiss="modal">&times;</span>
+                                        <h4>注册用框体</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form class="form-horizontal">
+                                            <div class="form-group">
+                                                <label class="col-xs-2 control-label" for="section5name">名字</label>
+                                                <div class="col-xs-9">
+                                                    <input type="text" id="section5name" class="form-control" placeholder="名字">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-xs-2 control-label" for="section5pass">密码</label>
+                                                <div class="col-xs-9">
+                                                    <input type="password" id="section5pass" class="form-control" placeholder="输入密码">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-xs-2 control-label" for="section5passc">确认密码</label>
+                                                <div class="col-xs-9">
+                                                    <input type="password" id="section5passc" class="form-control" placeholder="确认密码">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-xs-2 control-label" for="section5email">邮箱地址</label>
+                                                <div class="col-xs-9">
+                                                    <input type="email" id="section5email" class="form-control" placeholder="邮箱地址">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-xs-2 control-label" for="section5phone">电话号码</label>
+                                                <div class="col-xs-9">
+                                                    <input type="text" id="section5phone" class="form-control" placeholder="电话号码">
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-xs-2 control-label">性别</label>
+                                                <div class="checkbox-inline">
+                                                    <input type="radio" name="sex" value="男">男
+                                                </div>
+                                                <div class="checkbox-inline">
+                                                    <input type="radio" name="sex" value="女">女
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="col-xs-2 control-label">个人喜好</label>
+                                                <div class="checkbox-inline">
+                                                    <input type="checkbox" value="read">看书
+                                                </div>
+                                                <div class="checkbox-inline">
+                                                    <input type="checkbox" value="play">玩游戏
+                                                </div>
+                                                <div class="checkbox-inline">
+                                                    <input type="checkbox" value="excise">运动
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-warning">重置按钮</button>
+                                        <button type="submit" class="btn btn-primary">提交按钮</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--END 示例区域-->
+                    </div>
+                </div>
+            </div>
+            <!--5模态框-->
+
+            <!--6提示框体-->
+            <div class="panel panel-primary"  id="section6">
+                <div class="panel-heading blackTheme">
+                    <span class="close">&times</span>
+                    <h3 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse6">提示框</a>
+                    </h3>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <p>提示框 使用前必须使用js tooltip方法初始化</p>
+
+                        <!--BEGIN 示例区域-->
+                        <a href="#" data-toggle="tooltip" title="这是一个提示用的框体" data-placement="top">悬停于此可查看提示信息</a>
+
+                        <!--END 示例区域-->
+                    </div>
+                </div>
+            </div>
+            <!--6提示框体-->
+
+            <!--7切换卡-->
+            <div class="panel panel-primary"  id="section7">
+                <div class="panel-heading blackTheme">
+                    <span class="close">&times</span>
+                    <h3 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse7">导航元素/切换卡</a>
+                    </h3>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <p>一个简单的导航元素/切换卡</p>
+                        <p>导航元素的使用nav nav-tabs，切换卡，即添加data-toggle="tab"</p>
+                        <p>经测试，这里必须使用UL LI标签，不能使用其他的标签，会导致问题</p>
+
+                        <!--BEGIN 示例区域-->
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#section7test1">测试</a></li>
+                            <li><a data-toggle="tab" href="#section7test2">测试</a></li>
+                            <li><a data-toggle="tab" href="#section7test3">测试</a></li>
+                            <li><a data-toggle="tab" href="#section7test4">测试</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane fade in active" id="section7test1">这里是测试1的内容</div>
+                            <div class="tab-pane fade" id="section7test2">这里是测试2的内容</div>
+                            <div class="tab-pane fade" id="section7test3">这里是测试3的内容</div>
+                            <div class="tab-pane fade" id="section7test4">这里是测试4的内容</div>
+                        </div>
+
+                        <!--END 示例区域-->
+                    </div>
+                </div>
+            </div>
+            <!--7切换卡-->
+
+            <!--8警告框-->
+            <div class="panel panel-primary"  id="section8">
+                <div class="panel-heading blackTheme">
+                    <span class="close">&times</span>
+                    <h3 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse8">警告框</a>
+                    </h3>
+                </div>
+                <div id="collapse8" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <p>一个简单的警告框</p>
+
+                        <!--BEGIN 示例区域-->
+                        <button id="section8popAlert" type="button" class="btn btn-danger" style="width: 50%">弹出错误提示框</button>
+                        <div class="alert alert-danger fade in" id="section8alert">
+                            <a href="#" class="close" data-dismiss="alert">&times;</a>
+                            <strong>有一个错误提示。</strong>
+                        </div>
+                        <!--END 示例区域-->
+                    </div>
+                </div>
+            </div>
+            <!--8警告框-->
+
+            <!--9图片轮播-->
+            <div class="panel panel-primary"  id="section9">
+                <div class="panel-heading blackTheme">
+                    <span class="close">&times</span>
+                    <h3 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse9">图片轮播</a>
+                    </h3>
+                </div>
+                <div id="collapse9" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <p style="text-align: center">一个图片轮播的示例</p>
+
+                        <!--BEGIN 示例区域-->
+                        <div id="myCarousel" class="carousel slide" style="width: 400px;margin: 0 auto">
+                            <!-- 轮播（Carousel）指标 -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                            </ol>
+                            <!-- 轮播（Carousel）项目 -->
+                            <div class="carousel-inner">
+                                <div class="item active">
+                                    <img src="pic/1.jpg" alt="First slide">
+                                    <div class="carousel-caption">标题 1</div>
+                                </div>
+                                <div class="item">
+                                    <img src="pic/2.jpg" alt="Second slide">
+                                    <div class="carousel-caption">标题 2</div>
+                                </div>
+                                <div class="item">
+                                    <img src="pic/3.jpg" alt="Third slide">
+                                    <div class="carousel-caption">标题 3</div>
+                                </div>
+                            </div>
+                            <!-- 轮播（Carousel）导航 -->
+                            <a class="carousel-control left" href="#myCarousel"
+                               data-slide="prev">&lsaquo;</a>
+                            <a class="carousel-control right" href="#myCarousel"
+                               data-slide="next">&rsaquo;</a>
+                        </div>
+                        <!--END 示例区域-->
+                    </div>
+                </div>
+            </div>
+            <!--9图片轮播-->
+
+            <!--10动态按钮效果/下划线-->
+            <div class="panel panel-primary"  id="section10">
+                <div class="panel-heading blackTheme">
+                    <span class="close">&times</span>
+                    <h3 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse10">动态按钮</a>
+                    </h3>
+                </div>
+                <div id="collapse10" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <p>一个动态效果的按钮</p>
+
+                        <!--BEGIN 示例区域-->
+                        <a href="javascript:void(0)" class="section10ActiveButton" style="display: inline-block; width: 100px;height: 40px ;color: black;text-align: center;line-height: 40px ; position: relative;text-decoration: none">
+                            测试1
+                            <span style="height: 4px  ; background-color:#5956a8 ; position: absolute ; left: 0px ; bottom: 0px"></span>
+                        </a>
+                        <a href="javascript:void(0)" class="section10ActiveButton" style="display: inline-block; width: 100px;height: 40px ;color: black;text-align: center;line-height: 40px ; position: relative;text-decoration: none">
+                            测试2
+                            <span style="height: 4px  ; background-color:#5956a8 ; position: absolute ; left: 0px ; bottom: 0px"></span>
+                        </a>
+                        <a href="javascript:void(0)" class="section10ActiveButton" style="display: inline-block; width: 100px;height: 40px ;color: black;text-align: center;line-height: 40px ; position: relative;text-decoration: none">
+                            测试3
+                            <span style="height: 4px  ; background-color:#5956a8 ; position: absolute ; left: 0px ; bottom: 0px"></span>
+                        </a>
+                        <!--END 示例区域-->
+                    </div>
+                </div>
+            </div>
+            <!--9图片轮播-->
+
+        </div>
+    </div>
+</div>
+
+<script>
+
+$(function()
+{
+    $(".searchMothod a").click(function(e)
+    {
+        $(this).parent().parent().find("li.active").removeClass("active");
+        $(this).parent().addClass("active");
+    });
+    $("[data-toggle='tooltip']").tooltip();
+    $("#section8popAlert").click(function()
+    {
+        var newNode1=$("<div></div>");
+        newNode1.addClass("alert alert-danger fade in");
+        newNode1.attr("id","section8alert");
+        var newNode2 = $("<a href='#' class='close' data-dismiss='alert'>&times;</a>");
+        var newNode3 = $("<strong>有一个错误提示。</strong>");
+
+        newNode1.append(newNode2);
+        newNode1.append(newNode3);
+
+        $(this).after(newNode1);
+    });
+
+    //10的动态按钮JS
+    $(".section10ActiveButton").mouseover(function()
+    {
+        var res = $(this).find("span");
+        res.stop().animate({"width":"100px","opacity":"1"},400);
+    }).mouseout(function()
+    {
+        var res = $(this).find("span");
+        res.stop().animate({"width":"0px","opacity":"0"},400);
+    });
+});
+
+</script>
+
+
+</body>
+</html>

@@ -48,7 +48,7 @@ window.onload = function ()
     document.getElementById("idUserPassword").onfocus = function(){disapperErrorDiv()};
 
     var currentImg = 1;
-    var inter = window.setInterval(function(){switchBackImg((currentImg++)%4)},4000);
+    var inter = window.setInterval(function(){switchBackImg((currentImg++)%4,currentImg)},4000);
 
 
 }
@@ -63,8 +63,39 @@ function disapperErrorDiv()
     $('#idTopRedOrGreen').fadeOut(0);
 }
 
-function switchBackImg(task)
+var timeIntervalHandle;
+function switchBackImg(task,curr=-1)
 {
+    if(curr==-2)
+    {
+        //非默认形态
+        var timeInterval = 1000; //总计的时间
+
+        var left = document.getElementById("imgWall5");
+        var right = document.getElementById("imgWall6");
+        left.style.background="url('../Public/Home/img/test/1.jpg')";
+        right.style.background="url('../Public/Home/img/test/2.jpg')";
+
+        left.style.width="600px";
+        left.style.left="0px";
+        right.style.width="0px";
+        left.style.display="block";
+        right.style.display="block";
+
+        var times=1000;
+        var count =1000/16;
+        var every = 600/count;
+        var times= 1;
+        for(var ic = 0 ; ic<count ; ic++)
+        {
+            setTimeout(function()
+            {
+                transition(times++,count,every);
+            },ic*16);
+        }
+
+    }
+
     var currentImg = document.getElementById("hidden_CurImg").innerHTML;
     currentImg = parseInt(currentImg);
     task = parseInt(task);
@@ -75,4 +106,22 @@ function switchBackImg(task)
 
     document.getElementsByClassName("switchBackImgButton")[currentImg].style.color="white";
     document.getElementsByClassName("switchBackImgButton")[task].style.color="red";
+}
+
+var lll=600;
+function transition(pre,count,every)
+{
+    var left = document.getElementById("imgWall5");
+    var right = document.getElementById("imgWall6");
+
+
+    var lwidth = 600-pre*every;
+    var rwidth = pre*every;
+
+    console.log(lwidth);
+    console.log(rwidth);
+
+
+    left.style.left="-"+rwidth+"px";
+    right.style.width=rwidth+"px";
 }
