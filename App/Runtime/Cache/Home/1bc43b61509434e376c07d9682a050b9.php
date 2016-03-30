@@ -27,7 +27,7 @@
             <a onclick="" href="<?php echo U('CarepersonList/displayCarePage');?>"><img src="/Public/Home/img/icon/view.png"></a>
             <a onclick="" href="<?php echo U('CarepersonList/displayListenPage');?>"><img src="/Public/Home/img/icon/listener.png"></a>
             <a onclick="" href="<?php echo U('Login/index');?>"><img src="/Public/Home/img/icon/exit.png"></a>
-            <a onclick="alert('该按钮功能暂时未开放')" ><img src="/Public/Home/img/icon/setting.png"></a>
+            <a onclick="" href="<?php echo U('Setting/displaySettingPage');?>" ><img src="/Public/Home/img/icon/setting.png"></a>
             <div id="iSearchDiv">
                 <span></span>
                 <input id="iSearchInput" placeholder="微博用户名/微博ID">
@@ -72,9 +72,9 @@
 <script type="text/javascript" language="javascript" src="/Public/Home/js/blogTextTable.js"></script>
 
 <?php if(is_array($user_blogs)): foreach($user_blogs as $key=>$blog): ?><div id="iBlogTextTableDiv" name = "article_id_<?php echo ($blog["article_id"]); ?>">
-    <?php if($pageInfo["pageModel"] == 1): ?><div id="iDeleteButton"><a id="iDeleteBlogButton" onclick="deleteBlogFunction(this.parentNode.parentNode)" style="cursor: pointer">删除</a></div><?php endif; ?>
+    <?php if($pageInfo["pageMode"] == 1): ?><div id="iDeleteButton"><a id="iDeleteBlogButton" onclick="deleteBlogFunction(this.parentNode.parentNode)" style="cursor: pointer">删除</a></div><?php endif; ?>
     <div id="iTopTableDiv">
-        <div id="iImageDiv"><img src="/Public/Home/img/icon/agree.jpg"></div>
+        <div id="iImageDiv"><img src="/Public/Home/uploads/<?php echo ($userInfo["user_img"]); ?>"></div>
         <div id="iNameContentTimeDiv">
             <div id="iNameDiv"  class="cText">
                 <strong>
@@ -83,7 +83,8 @@
                         <?php echo ($blog["user_name"]); endif; ?>
                 </strong>
             </div>
-            <div id="iBlogContentDiv" class="cText"><?php echo ($blog["article_content"]); ?></div>
+            <input id="btt_GifBagUrl" type="button" style="display: none;" value="/Public/Home/img/gif/">
+            <div id="iBlogContentDiv" class="cText cTextContent"><?php echo ($blog["article_content"]); ?></div>
             <div id="iTimeDiv" class="cText"><?php echo ($blog["article_time"]); ?></div>
         </div>
         <!--<div id="iFloatRightButton">test</div>-->
@@ -117,7 +118,7 @@
     <div id="btt_PageContent" style="display: none">
         <input type="button" value="首页" onclick="showMoreTalks(1)">
         <input type="button" value="前一页" onclick="showMoreTalks(2)">
-        <input type="text" maxlength="6" style="width:50px;" value="1">
+        <input type="text" maxlength="6" style="width:50px;" value="1" id="btt_InputUserWantPage">
         /<sapn id = "btt_AllTalkCount">1</sapn>
         <input type="button" value="跳转" onclick="showMoreTalks(3)">
         <input type="button" value="后一页" onclick="showMoreTalks(4)">
@@ -125,7 +126,7 @@
     </div>
 
     <!--暂时隐藏 需要的时候拿出来-->
-    <div id="talk_class" class="talk_class" style="display: none;">
+    <div id="talk_class_copy" class="talk_class_copy" style="display: none;">
         <div id="talker_img"><img src="/Public/Home/img/icon/sun.gif"></div>
         <div id="talker_right">
             <div id="talk_nameAndSaid" class="talk_nameAndSaid">宇宙无敌威震天:</div>

@@ -1,0 +1,130 @@
+[ 2016-03-30T10:12:31+08:00 ] 127.0.0.1 /Login/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.056003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.057003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `pb_access` [ RunTime:0.0080s ]
+SQL: INSERT INTO `pb_access` (`access_ip`,`access_time`) VALUES ('127.0.0.1','1459303951') [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-30T10:12:31+08:00 ] 127.0.0.1 /Login/Name.manifest
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+ERR: 非法操作:Name.manifest
+
+[ 2016-03-30T10:13:13+08:00 ] 127.0.0.1 /index.php/Login/confirmLoginAction.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `pb_user` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `pb_user` WHERE `user_email` = 'test@163.com'  [ RunTime:0.0020s ]
+SQL: SELECT * FROM `pb_user` WHERE `user_email` = 'test@163.com' AND `user_pass` = '7c4a8d09ca3762af61e59520943dc26494f8941b'  [ RunTime:0.0000s ]
+
+[ 2016-03-30T10:13:13+08:00 ] 127.0.0.1 /index.php/BlogMainPage/showMainPage
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `pb_user` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `pb_user` WHERE `user_id` = 41 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `pb_article` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `pb_article` WHERE `user_id` = 41 ORDER BY article_id desc LIMIT 0,10   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.151008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.151008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-30T10:13:18+08:00 ] 127.0.0.1 /index.php/BlogMainPage/submitMyBlog
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `pb_article` [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: validate D:\FlowerBlog\ThinkPHP\Library\Think\Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto D:\FlowerBlog\ThinkPHP\Library\Think\Model.class.php 第 1128 行.
+SQL: INSERT INTO `pb_article` (`article_content`,`user_id`,`article_agree`,`article_talk`,`article_collection`,`article_time`) VALUES ('dtdtty','41','0','0','0','2016-03-30 10:13:18') [ RunTime:0.0000s ]
+
+[ 2016-03-30T10:14:30+08:00 ] 127.0.0.1 /index.php/SearchPage/searchPage.html?searchContent=39
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `pb_user` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `pb_user` WHERE `user_id` = 39 OR `user_name` = '39'  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `pb_care` [ RunTime:0.0050s ]
+SQL: SELECT `user_id` FROM `pb_care` WHERE ( user_id=41 AND care_user_id='39' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT `user_id` FROM `pb_care` WHERE ( user_id=41 AND care_user_id='43' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: yourInfo D:\FlowerBlog\App\Runtime\Cache\Home\f515ce6c914786aa538f601564256a69.php 第 22 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.041003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.041003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2016-03-30T10:14:32+08:00 ] 127.0.0.1 /index.php/OtherPersonPage/displayPage.html?userID=39
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `pb_user` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `pb_user` WHERE `user_id` = 39 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `pb_care` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `pb_care` WHERE `user_id` = 41 AND `care_user_id` = 39 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `pb_article` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `pb_article` WHERE `user_id` = 39 ORDER BY article_id desc LIMIT 0,10   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
