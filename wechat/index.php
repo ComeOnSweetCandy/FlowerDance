@@ -3,8 +3,6 @@
  * wechat php test
  */
 
-echo "yes";
-
 //define your token
 define("TOKEN", "weixin");
 $wechatObj = new wechatCallbackapiTest();
